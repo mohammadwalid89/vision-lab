@@ -1,0 +1,15 @@
+{
+  "cost_medians_cpu_s": {
+    "l1": 0.46126276450002024,
+    "l2_semantic_incremental": 0.750541997500008,
+    "l2_full_incremental": 7.215334202999128,
+    "l1_plus_l2_semantic": 1.2118047620000283
+  },
+  "scope": "MVTec LOCO dev_audit (n=592, 259 anomalies, 333 good)",
+  "l1": "per-category robust-z PatchCore score; conformal p-value from GOOD calibration",
+  "l2_semantic": "per-category robust-z semantic representation score; conformal p-value",
+  "l2_full": "logistic over semantic/fused/AnomalyCLIP z-scores, trained on router_train; conformal p-value from GOOD calibration",
+  "cost": "recorded CPU from prior runs; l1 median and l2 semantic/full medians; not a new end-to-end latency measurement",
+  "unresolved": "HUMAN is not counted as autonomous or correct",
+  "prior_issue": "previous task_policy_learning_results counted 592 l2_checked cases even though no L2 verdict existed; here l2_run_rate is the actual executed fraction"
+}

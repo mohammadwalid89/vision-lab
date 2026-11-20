@@ -1,0 +1,1 @@
+{"slot1_placebo": "random_area_ps_", "transforms": ["identity", "sam_meanfill", "padding_only", "random_area_ps_1", "random_area_ps_2", "random_area_ps_3"]}

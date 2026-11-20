@@ -1,0 +1,8 @@
+{
+  "purpose": "evaluate on images not present in the prior surface run",
+  "prior_run": "results/mvtec_ad_surface.json / results/runs/afa...json",
+  "test": "90 good calibration normals + 90 train-exception anomalies (10+10 per category)",
+  "threshold": "the other 10 calibration normals per category",
+  "not_used": "the 225 test images that overlap the prior surface run",
+  "caveat": "still MVTec collection; no physical unit IDs; 10 normals per threshold"
+}

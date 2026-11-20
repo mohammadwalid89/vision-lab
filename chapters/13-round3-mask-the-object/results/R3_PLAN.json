@@ -1,0 +1,128 @@
+{
+ "seeds": [
+  20261112,
+  20261113,
+  20261114
+ ],
+ "ks": [
+  8,
+  32,
+  128
+ ],
+ "primary_k": 32,
+ "cal_n": {
+  "0": 384,
+  "1": 128
+ },
+ "k_largest": 128,
+ "min_per_label": 64,
+ "slots": [
+  "slot1",
+  "slot2",
+  "slot3"
+ ],
+ "recipes": {
+  "slot1": {
+   "transform": "sam_meanfill",
+   "fill": "encoder_mean = round(255 x the arm encoder normalisation mean); see arms[*].fill_rgb",
+   "mask": "R1 SAM object mask, as stored",
+   "head": "A recipe refit on transformed fitting pool",
+   "placebos": "random_area x3 (cyclic shift)",
+   "references": [
+    "padding_only",
+    "testtime_mask_A_head"
+   ]
+  },
+  "slot2": {
+   "feature": "object_only patch-grid (SigLIP 14x14, DINOv2 16x16) last-layer post-LN aggregate",
+   "weights": "SAM coverage, normalised",
+   "head": "A recipe",
+   "placebos": "within-source permutation x3",
+   "references": [
+    "uniform",
+    "pooled_concat"
+   ]
+  },
+  "slot3": {
+   "deletion_recipe": {
+    "fraction": 0.05,
+    "epochs": 300,
+    "tau_start": 1.0,
+    "tau_end": 0.2,
+    "lr": 0.05,
+    "lam_pres": 1.0,
+    "preserve_n": 2048,
+    "preserve_namespace": "r3|slot3|preserve|",
+    "random_draws": 3,
+    "sha256": "142f54663a189147b301c4c84e0d46f63b0d6277a1c092b79ec71980192d570b"
+   }
+  }
+ },
+ "transforms": [
+  "identity",
+  "sam_meanfill",
+  "padding_only",
+  "random_area_ps_1",
+  "random_area_ps_2",
+  "random_area_ps_3"
+ ],
+ "gate_families": [
+  "CORE",
+  "G5"
+ ],
+ "threshold_rules": [
+  "per_pipeline",
+  "shared_A"
+ ],
+ "binding_rule": "per_pipeline",
+ "feasibility_tol": 0.02,
+ "alpha": 0.01,
+ "resources": {
+  "max_cores": 3,
+  "nice": 10,
+  "free_floor_gib": 4,
+  "footprint_cap_gb": 5,
+  "rss_ceiling_gib": 8
+ },
+ "slot1_placebo": "random_area_ps_",
+ "content_box": [
+  24,
+  24,
+  360,
+  360
+ ],
+ "shard_size": 512,
+ "alignment_views": 12,
+ "determinism_views": 512,
+ "alignment_tol_abs": 0.05,
+ "arms": {
+  "siglip": {
+   "encoder": "siglip",
+   "role": "primary",
+   "suffix": "",
+   "fill_rgb": [
+    128,
+    128,
+    128
+   ],
+   "r1_cache_alignment": true,
+   "weights_sha256": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+   "input": "SigLIP processor: 224 px, mean/std 0.5; 14x14 tokens; pooled = MAP head"
+  },
+  "dinov2": {
+   "encoder": "dinov2",
+   "role": "ADDED ARM (owner approval 2026-11-17 15:07 PT)",
+   "suffix": "_dinov2",
+   "fill_rgb": [
+    124,
+    116,
+    104
+   ],
+   "r1_cache_alignment": false,
+   "weights_sha256": "c24ecfb4a1d8ca79193f6b9efcffc461872a09ddac43a0931357e4802931a006",
+   "input": "timm vit_base_patch14_reg4_dinov2.lvd142m, whole 384 canvas -> 224 px bicubic, ImageNet mean/std, 16x16 patch tokens, 4 registers dropped, pooled = CLS, mean_patch = token mean",
+   "same_as_primary": "slots, recipes, gates, k schedule, seeds, thresholds, calibration partition, controls",
+   "reporting": "separate attempt ledger and results; no pooling or selection across arms"
+  }
+ }
+}

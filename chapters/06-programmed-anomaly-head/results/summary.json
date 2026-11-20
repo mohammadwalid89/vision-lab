@@ -1,0 +1,864 @@
+{
+  "schema": "vision-weight-edit-pilot1-1",
+  "task": "surface_anomaly_decision (ok/not_ok), MVTec AD, 9 categories",
+  "cohort": {
+    "rows_sha256": "a3179c5fff5ea4766a6b23d5fdc0f31af5913c7fdaa847739a8988ff5a2f530e",
+    "clip_embeddings_sha256": "a42f76a520834f1910d9c7678b4d4b4cd825321a71dbf1a6a7226e871be446d6",
+    "resnet_embeddings_sha256": "46248ed3f548abb7dc1c183ec685542ac07f444906ac8fe0740eb2c564ca32c7",
+    "n": 855,
+    "categories": [
+      "capsule",
+      "carpet",
+      "grid",
+      "leather",
+      "metal_nut",
+      "screw",
+      "toothbrush",
+      "wood",
+      "zipper"
+    ],
+    "feature_dim": 3593,
+    "counts": {
+      "train_rows": 450,
+      "train_good": 360,
+      "train_defect": 90,
+      "calibration_rows": 180,
+      "test_rows": 225,
+      "test_good": 90,
+      "test_defect": 135
+    },
+    "leakage_audit": {
+      "router_train": {
+        "protocol_rows": 210,
+        "overlap_with_cohort": 0
+      },
+      "gate1": {
+        "protocol_rows": 300,
+        "overlap_with_cohort": 0
+      },
+      "dev_audit": {
+        "protocol_rows": 157,
+        "overlap_with_cohort": 0
+      },
+      "final_reserved": {
+        "protocol_rows": 60,
+        "overlap_with_cohort": 0
+      },
+      "calibration": {
+        "protocol_rows": 1294,
+        "overlap_with_cohort": 0
+      },
+      "fit": {
+        "protocol_rows": 240,
+        "overlap_with_cohort": 0
+      },
+      "final60_overlap": 0,
+      "gate1_overlap": 0
+    },
+    "prior_exposure": "all rows were scored by an earlier experiment; the test rows also overlap an earlier surface experiment, so this is not blind"
+  },
+  "architecture": {
+    "input": "standardised CLIP(1024) + ResNet(2560) + category one-hot(9)",
+    "hidden": "2 signed ReLU units per category, category-gated",
+    "parameters_per_neural_arm": 64711
+  },
+  "arms": {
+    "ZERO_untrained": {
+      "parameters": 64711,
+      "nonzero_weight_fraction": 0.0,
+      "weight_sha256": "d204b1b1ac44a4aaa529381e00081de7b7594aa6aad7a3f8820df310b339aca7",
+      "build_plus_forward_cpu_s": 0.0021,
+      "threshold_calibrated_q95": 0.0,
+      "escalation_band": 0.0,
+      "test_auc": 0.5,
+      "test_auc_ci95_bootstrap": [
+        0.5,
+        0.5
+      ],
+      "operating_point": {
+        "n": 225,
+        "defects": 135,
+        "goods": 90,
+        "wrong_releases": 0,
+        "wrong_release_rate": 0.0,
+        "false_holds": 90,
+        "false_hold_rate": 1.0,
+        "human_escalation": 225,
+        "human_escalation_rate": 1.0,
+        "accuracy": 0.6
+      },
+      "per_category": {
+        "capsule": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        },
+        "carpet": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        },
+        "grid": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        },
+        "leather": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        },
+        "metal_nut": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        },
+        "screw": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        },
+        "toothbrush": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        },
+        "wood": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        },
+        "zipper": {
+          "auc": 0.5,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 10
+        }
+      },
+      "worst_category_auc": 0.5,
+      "cpu_s_scoring": 0.0675,
+      "label_use": "none"
+    },
+    "PROGRAMMED_closed_form": {
+      "parameters": 64711,
+      "nonzero_weight_fraction": 0.996368,
+      "weight_sha256": "8b03067a5171923248d242d6dc98a7719c7b5c3758bf8bef9454aab4f2747177",
+      "build_plus_forward_cpu_s": 0.0017,
+      "threshold_calibrated_q95": 0.047615,
+      "escalation_band": 0.223128,
+      "test_auc": 0.8158,
+      "test_auc_ci95_bootstrap": [
+        0.7606,
+        0.8664
+      ],
+      "operating_point": {
+        "n": 225,
+        "defects": 135,
+        "goods": 90,
+        "wrong_releases": 68,
+        "wrong_release_rate": 0.5037,
+        "false_holds": 9,
+        "false_hold_rate": 0.1,
+        "human_escalation": 115,
+        "human_escalation_rate": 0.5111,
+        "accuracy": 0.6578
+      },
+      "per_category": {
+        "capsule": {
+          "auc": 0.7667,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 6,
+          "false_holds": 2
+        },
+        "carpet": {
+          "auc": 0.94,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 3,
+          "false_holds": 0
+        },
+        "grid": {
+          "auc": 0.7733,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 8,
+          "false_holds": 2
+        },
+        "leather": {
+          "auc": 1.0,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 2,
+          "false_holds": 0
+        },
+        "metal_nut": {
+          "auc": 0.6533,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 9,
+          "false_holds": 3
+        },
+        "screw": {
+          "auc": 0.6533,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 9,
+          "false_holds": 2
+        },
+        "toothbrush": {
+          "auc": 0.4867,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 15,
+          "false_holds": 0
+        },
+        "wood": {
+          "auc": 0.8867,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 10,
+          "false_holds": 0
+        },
+        "zipper": {
+          "auc": 0.9267,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 6,
+          "false_holds": 0
+        }
+      },
+      "worst_category_auc": 0.4867,
+      "cpu_s_scoring": 0.1275,
+      "label_use": "fit-split class-conditional means and directions; no gradient, no optimizer",
+      "program_build_cpu_s": 0.0042,
+      "per_category_program": {
+        "capsule": {
+          "raw_separation_norm": 9.046,
+          "midpoint_projection": -4.182,
+          "normal_spread": 1.814,
+          "fit_rows": 50,
+          "fit_defects": 10
+        },
+        "carpet": {
+          "raw_separation_norm": 19.81,
+          "midpoint_projection": -3.415,
+          "normal_spread": 0.724,
+          "fit_rows": 50,
+          "fit_defects": 10
+        },
+        "grid": {
+          "raw_separation_norm": 14.063,
+          "midpoint_projection": -2.367,
+          "normal_spread": 7.944,
+          "fit_rows": 50,
+          "fit_defects": 10
+        },
+        "leather": {
+          "raw_separation_norm": 24.348,
+          "midpoint_projection": 5.126,
+          "normal_spread": 1.063,
+          "fit_rows": 50,
+          "fit_defects": 10
+        },
+        "metal_nut": {
+          "raw_separation_norm": 16.616,
+          "midpoint_projection": -0.842,
+          "normal_spread": 5.765,
+          "fit_rows": 50,
+          "fit_defects": 10
+        },
+        "screw": {
+          "raw_separation_norm": 14.492,
+          "midpoint_projection": 3.915,
+          "normal_spread": 20.45,
+          "fit_rows": 50,
+          "fit_defects": 10
+        },
+        "toothbrush": {
+          "raw_separation_norm": 24.986,
+          "midpoint_projection": 2.625,
+          "normal_spread": 27.059,
+          "fit_rows": 50,
+          "fit_defects": 10
+        },
+        "wood": {
+          "raw_separation_norm": 38.104,
+          "midpoint_projection": 6.817,
+          "normal_spread": 2.675,
+          "fit_rows": 50,
+          "fit_defects": 10
+        },
+        "zipper": {
+          "raw_separation_norm": 17.842,
+          "midpoint_projection": -0.605,
+          "normal_spread": 3.469,
+          "fit_rows": 50,
+          "fit_defects": 10
+        }
+      }
+    },
+    "PLACEBO_random_direction": {
+      "parameters": 64711,
+      "nonzero_weight_fraction": 0.997759,
+      "weight_sha256": "7b209ce88ba33e25dfaa20d8cdc6ac15430fdb1cdaf052f536606ceec77ecf5d",
+      "build_plus_forward_cpu_s": 0.0018,
+      "threshold_calibrated_q95": 1.251357,
+      "escalation_band": 0.263426,
+      "test_auc": 0.5164,
+      "test_auc_ci95_bootstrap": [
+        0.4474,
+        0.594
+      ],
+      "operating_point": {
+        "n": 225,
+        "defects": 135,
+        "goods": 90,
+        "wrong_releases": 107,
+        "wrong_release_rate": 0.7926,
+        "false_holds": 11,
+        "false_hold_rate": 0.1222,
+        "human_escalation": 24,
+        "human_escalation_rate": 0.1067,
+        "accuracy": 0.4756
+      },
+      "per_category": {
+        "capsule": {
+          "auc": 0.4667,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 12,
+          "false_holds": 3
+        },
+        "carpet": {
+          "auc": 0.1733,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 13,
+          "false_holds": 3
+        },
+        "grid": {
+          "auc": 0.52,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 15,
+          "false_holds": 0
+        },
+        "leather": {
+          "auc": 0.6733,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 9,
+          "false_holds": 1
+        },
+        "metal_nut": {
+          "auc": 0.5467,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 13,
+          "false_holds": 1
+        },
+        "screw": {
+          "auc": 0.62,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 15,
+          "false_holds": 1
+        },
+        "toothbrush": {
+          "auc": 0.8533,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 8,
+          "false_holds": 0
+        },
+        "wood": {
+          "auc": 0.64,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 10,
+          "false_holds": 0
+        },
+        "zipper": {
+          "auc": 0.28,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 12,
+          "false_holds": 2
+        }
+      },
+      "worst_category_auc": 0.1733,
+      "cpu_s_scoring": 0.1298,
+      "label_use": "fit-split normals only, for centering"
+    },
+    "TRAINED_adam_mlp": {
+      "parameters": 64711,
+      "nonzero_weight_fraction": 1.0,
+      "weight_sha256": "e3553a00568dd6f25abc2902c6a324c6f12d157a98c5d85c71436cfc15a88889",
+      "build_plus_forward_cpu_s": 0.0023,
+      "threshold_calibrated_q95": 1.735124,
+      "escalation_band": 2.360588,
+      "test_auc": 0.858,
+      "test_auc_ci95_bootstrap": [
+        0.8078,
+        0.9056
+      ],
+      "operating_point": {
+        "n": 225,
+        "defects": 135,
+        "goods": 90,
+        "wrong_releases": 61,
+        "wrong_release_rate": 0.4519,
+        "false_holds": 2,
+        "false_hold_rate": 0.0222,
+        "human_escalation": 36,
+        "human_escalation_rate": 0.16,
+        "accuracy": 0.72
+      },
+      "per_category": {
+        "capsule": {
+          "auc": 0.82,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 6,
+          "false_holds": 0
+        },
+        "carpet": {
+          "auc": 0.9667,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 1,
+          "false_holds": 0
+        },
+        "grid": {
+          "auc": 0.8267,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 8,
+          "false_holds": 0
+        },
+        "leather": {
+          "auc": 1.0,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 1,
+          "false_holds": 0
+        },
+        "metal_nut": {
+          "auc": 0.68,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 15,
+          "false_holds": 0
+        },
+        "screw": {
+          "auc": 0.8667,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 12,
+          "false_holds": 0
+        },
+        "toothbrush": {
+          "auc": 0.7067,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 7,
+          "false_holds": 2
+        },
+        "wood": {
+          "auc": 0.94,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 6,
+          "false_holds": 0
+        },
+        "zipper": {
+          "auc": 0.9467,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 5,
+          "false_holds": 0
+        }
+      },
+      "worst_category_auc": 0.68,
+      "cpu_s_scoring": 0.1292,
+      "label_use": "same labelled rows, Adam",
+      "steps": 300,
+      "lr": 0.02,
+      "final_train_loss": 0.00042,
+      "train_cpu_s": 1.6892
+    },
+    "PATCHCAL": {
+      "parameters": 0,
+      "nonzero_weight_fraction": 0.0,
+      "weight_sha256": "588df5f385006fe2fc0ad13c12d515619e327ca997720e8101f9d3f32b2725a6",
+      "score_source": "existing PatchCore memory-bank score",
+      "cpu_s_scoring": 0.1306,
+      "threshold_calibrated_q95": 7.629715,
+      "escalation_band": 0.829653,
+      "test_auc": 0.8886,
+      "test_auc_ci95_bootstrap": [
+        0.8419,
+        0.929
+      ],
+      "operating_point": {
+        "n": 225,
+        "defects": 135,
+        "goods": 90,
+        "wrong_releases": 53,
+        "wrong_release_rate": 0.3926,
+        "false_holds": 5,
+        "false_hold_rate": 0.0556,
+        "human_escalation": 12,
+        "human_escalation_rate": 0.0533,
+        "accuracy": 0.7422
+      },
+      "per_category": {
+        "capsule": {
+          "auc": 0.9333,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 4,
+          "false_holds": 1
+        },
+        "carpet": {
+          "auc": 0.9733,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 2,
+          "false_holds": 0
+        },
+        "grid": {
+          "auc": 0.78,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 15,
+          "false_holds": 0
+        },
+        "leather": {
+          "auc": 1.0,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 0,
+          "false_holds": 0
+        },
+        "metal_nut": {
+          "auc": 0.96,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 5,
+          "false_holds": 0
+        },
+        "screw": {
+          "auc": 0.8067,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 15,
+          "false_holds": 0
+        },
+        "toothbrush": {
+          "auc": 0.8667,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 5,
+          "false_holds": 3
+        },
+        "wood": {
+          "auc": 0.98,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 4,
+          "false_holds": 0
+        },
+        "zipper": {
+          "auc": 0.9267,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 3,
+          "false_holds": 1
+        }
+      },
+      "worst_category_auc": 0.78
+    },
+    "CLIPCAL": {
+      "parameters": 0,
+      "nonzero_weight_fraction": 0.0,
+      "weight_sha256": "44fdae74119c6a31ef44d039ab7d60ee3fbe3b710bdd8c5fc6de4d04cef2f14b",
+      "score_source": "existing CLIP RN50 contrast score",
+      "cpu_s_scoring": 0.1311,
+      "threshold_calibrated_q95": 1.459751,
+      "escalation_band": 0.355383,
+      "test_auc": 0.7715,
+      "test_auc_ci95_bootstrap": [
+        0.7102,
+        0.8335
+      ],
+      "operating_point": {
+        "n": 225,
+        "defects": 135,
+        "goods": 90,
+        "wrong_releases": 74,
+        "wrong_release_rate": 0.5481,
+        "false_holds": 12,
+        "false_hold_rate": 0.1333,
+        "human_escalation": 17,
+        "human_escalation_rate": 0.0756,
+        "accuracy": 0.6178
+      },
+      "per_category": {
+        "capsule": {
+          "auc": 0.7067,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 12,
+          "false_holds": 0
+        },
+        "carpet": {
+          "auc": 0.9067,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 1,
+          "false_holds": 8
+        },
+        "grid": {
+          "auc": 0.78,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 10,
+          "false_holds": 0
+        },
+        "leather": {
+          "auc": 0.9667,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 2,
+          "false_holds": 1
+        },
+        "metal_nut": {
+          "auc": 0.7467,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 14,
+          "false_holds": 0
+        },
+        "screw": {
+          "auc": 0.7333,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 10,
+          "false_holds": 1
+        },
+        "toothbrush": {
+          "auc": 0.6933,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 10,
+          "false_holds": 0
+        },
+        "wood": {
+          "auc": 0.9467,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 7,
+          "false_holds": 1
+        },
+        "zipper": {
+          "auc": 0.76,
+          "n": 25,
+          "defects": 15,
+          "goods": 10,
+          "wrong_releases": 8,
+          "false_holds": 1
+        }
+      },
+      "worst_category_auc": 0.6933
+    }
+  },
+  "comparisons": {
+    "PROGRAMMED_vs_TRAINED": {
+      "test_auc": {
+        "a": 0.8158,
+        "b": 0.858,
+        "delta_b_minus_a": 0.0422
+      },
+      "wrong_releases": {
+        "a": 68,
+        "b": 61,
+        "delta_b_minus_a": -7
+      },
+      "false_holds": {
+        "a": 9,
+        "b": 2,
+        "delta_b_minus_a": -7
+      },
+      "worst_category_auc": {
+        "a": 0.4867,
+        "b": 0.68
+      }
+    },
+    "PROGRAMMED_vs_ZERO": {
+      "test_auc": {
+        "a": 0.5,
+        "b": 0.8158,
+        "delta_b_minus_a": 0.3158
+      },
+      "wrong_releases": {
+        "a": 0,
+        "b": 68,
+        "delta_b_minus_a": 68
+      },
+      "false_holds": {
+        "a": 90,
+        "b": 9,
+        "delta_b_minus_a": -81
+      },
+      "worst_category_auc": {
+        "a": 0.5,
+        "b": 0.4867
+      }
+    },
+    "PROGRAMMED_vs_PLACEBO": {
+      "test_auc": {
+        "a": 0.5164,
+        "b": 0.8158,
+        "delta_b_minus_a": 0.2994
+      },
+      "wrong_releases": {
+        "a": 107,
+        "b": 68,
+        "delta_b_minus_a": -39
+      },
+      "false_holds": {
+        "a": 11,
+        "b": 9,
+        "delta_b_minus_a": -2
+      },
+      "worst_category_auc": {
+        "a": 0.1733,
+        "b": 0.4867
+      }
+    },
+    "PROGRAMMED_vs_PATCHCAL": {
+      "test_auc": {
+        "a": 0.8886,
+        "b": 0.8158,
+        "delta_b_minus_a": -0.0728
+      },
+      "wrong_releases": {
+        "a": 53,
+        "b": 68,
+        "delta_b_minus_a": 15
+      },
+      "false_holds": {
+        "a": 5,
+        "b": 9,
+        "delta_b_minus_a": 4
+      },
+      "worst_category_auc": {
+        "a": 0.78,
+        "b": 0.4867
+      }
+    },
+    "TRAINED_vs_PATCHCAL": {
+      "test_auc": {
+        "a": 0.8886,
+        "b": 0.858,
+        "delta_b_minus_a": -0.0306
+      },
+      "wrong_releases": {
+        "a": 53,
+        "b": 61,
+        "delta_b_minus_a": 8
+      },
+      "false_holds": {
+        "a": 5,
+        "b": 2,
+        "delta_b_minus_a": -3
+      },
+      "worst_category_auc": {
+        "a": 0.78,
+        "b": 0.68
+      }
+    }
+  },
+  "resources": {
+    "cpu_s_total": 2.827,
+    "wall_s_total": 3.458,
+    "threads": 1
+  },
+  "notes": [
+    "The programmed arm is not zero-shot: it is built from fit-split label statistics.",
+    "The trained arm gets the same labelled rows.",
+    "ZERO and PLACEBO are controls, not methods."
+  ]
+}

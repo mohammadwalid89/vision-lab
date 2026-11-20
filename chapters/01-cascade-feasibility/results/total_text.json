@@ -1,0 +1,123 @@
+{
+  "dataset": "Total-Text",
+  "revision": "0ce21350d2ed3f47f7269c7a19d0eeb702952ace",
+  "runs": [
+    {
+      "engine": "paddleocr",
+      "run_id": "bfbf4f43-4407-4a61-bab1-61a550c75173",
+      "metrics": {
+        "n": 40,
+        "resolved": 0,
+        "coverage": 0.0,
+        "coverage_ci95": [
+          0,
+          0.0876
+        ],
+        "accuracy_resolved": null,
+        "accuracy_ci95": null,
+        "wrong_auto_accept": 0,
+        "wrong_auto_accept_per_10k": 0.0,
+        "exception_recall": null,
+        "exception_recall_ci95": null,
+        "queued": 40,
+        "recapture_requested": 0,
+        "resolved_by": {
+          "HUMAN": 40
+        },
+        "latency_p50_ms": 1244.68,
+        "latency_p95_ms": 4432.24,
+        "neurons_total": 0,
+        "label": "measured_public_subset_public_test"
+      },
+      "word_recall": 0.3333333333333333,
+      "matched_words": 82,
+      "reference_words": 246,
+      "word_recall_wilson95_descriptive_only": [
+        0.2774,
+        0.3944
+      ]
+    },
+    {
+      "engine": "tesseract",
+      "run_id": "6f721987-0d8a-47f1-a6df-4e4e6bcf9a66",
+      "metrics": {
+        "n": 40,
+        "resolved": 0,
+        "coverage": 0.0,
+        "coverage_ci95": [
+          0,
+          0.0876
+        ],
+        "accuracy_resolved": null,
+        "accuracy_ci95": null,
+        "wrong_auto_accept": 0,
+        "wrong_auto_accept_per_10k": 0.0,
+        "exception_recall": null,
+        "exception_recall_ci95": null,
+        "queued": 40,
+        "recapture_requested": 0,
+        "resolved_by": {
+          "HUMAN": 40
+        },
+        "latency_p50_ms": 268.2,
+        "latency_p95_ms": 346.51,
+        "neurons_total": 0,
+        "label": "measured_public_subset_public_test"
+      },
+      "word_recall": 0.14227642276422764,
+      "matched_words": 35,
+      "reference_words": 246,
+      "word_recall_wilson95_descriptive_only": [
+        0.1041,
+        0.1914
+      ]
+    }
+  ],
+  "paired_paddle_minus_tesseract_word_recall_ci95": [
+    0.1386861313868613,
+    0.24799051490514895
+  ],
+  "paired_case_ids": [
+    "total-text-img1",
+    "total-text-img10",
+    "total-text-img100",
+    "total-text-img1000",
+    "total-text-img1055",
+    "total-text-img1091",
+    "total-text-img1092",
+    "total-text-img1093",
+    "total-text-img1094",
+    "total-text-img1095",
+    "total-text-img1096",
+    "total-text-img1097",
+    "total-text-img1098",
+    "total-text-img1099",
+    "total-text-img1100",
+    "total-text-img1191",
+    "total-text-img1192",
+    "total-text-img1193",
+    "total-text-img1194",
+    "total-text-img1195",
+    "total-text-img1196",
+    "total-text-img1197",
+    "total-text-img1198",
+    "total-text-img1199",
+    "total-text-img1200",
+    "total-text-img1291",
+    "total-text-img1292",
+    "total-text-img1293",
+    "total-text-img1294",
+    "total-text-img1295",
+    "total-text-img1296",
+    "total-text-img1297",
+    "total-text-img1298",
+    "total-text-img1299",
+    "total-text-img1300",
+    "total-text-img1348",
+    "total-text-img1391",
+    "total-text-img1392",
+    "total-text-img1393",
+    "total-text-img1394"
+  ],
+  "limitation": "40 scenes; words within a scene are correlated; bootstrap resamples scenes"
+}

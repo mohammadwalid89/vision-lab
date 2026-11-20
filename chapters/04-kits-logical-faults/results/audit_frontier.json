@@ -1,0 +1,87 @@
+{
+  "candidates": {
+    "all_four": {
+      "escape_rate_at_that_point": 0.006711409395973154,
+      "escapes_at_that_point": 1,
+      "max_in_sample_good_release_at_budget": 2,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.655738
+    },
+    "component": {
+      "escape_rate_at_that_point": 0.0,
+      "escapes_at_that_point": 0,
+      "max_in_sample_good_release_at_budget": 0,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.983607
+    },
+    "component_resnet": {
+      "escape_rate_at_that_point": 0.006711409395973154,
+      "escapes_at_that_point": 1,
+      "max_in_sample_good_release_at_budget": 3,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.901639
+    },
+    "component_wrn": {
+      "escape_rate_at_that_point": 0.0,
+      "escapes_at_that_point": 0,
+      "max_in_sample_good_release_at_budget": 3,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.885246
+    },
+    "relational": {
+      "escape_rate_at_that_point": 0.0,
+      "escapes_at_that_point": 0,
+      "max_in_sample_good_release_at_budget": 0,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 1.0
+    },
+    "relational_resnet": {
+      "escape_rate_at_that_point": 0.006711409395973154,
+      "escapes_at_that_point": 1,
+      "max_in_sample_good_release_at_budget": 7,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.737705
+    },
+    "relational_wrn": {
+      "escape_rate_at_that_point": 0.0,
+      "escapes_at_that_point": 0,
+      "max_in_sample_good_release_at_budget": 1,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.885246
+    },
+    "resnet": {
+      "escape_rate_at_that_point": 0.006711409395973154,
+      "escapes_at_that_point": 1,
+      "max_in_sample_good_release_at_budget": 7,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.918033
+    },
+    "wrn": {
+      "escape_rate_at_that_point": 0.006711409395973154,
+      "escapes_at_that_point": 1,
+      "max_in_sample_good_release_at_budget": 5,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.885246
+    },
+    "wrn_resnet": {
+      "escape_rate_at_that_point": 0.006711409395973154,
+      "escapes_at_that_point": 1,
+      "max_in_sample_good_release_at_budget": 4,
+      "n_defect": 149,
+      "n_good": 84,
+      "release_threshold_p": 0.754098
+    }
+  },
+  "escape_budget": 0.01,
+  "frozen_policy_sha256": "e102abd060c86d8f790fff2631b294a3630ccc477817731202ce99821b90fff0",
+  "method": "release threshold swept over stored dev p-values with the frozen category gate; chosen on the same dev rows it scores, so optimistic"
+}

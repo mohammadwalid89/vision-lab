@@ -1,0 +1,30 @@
+{
+  "new_categories": [
+    "capsule",
+    "carpet",
+    "grid",
+    "leather",
+    "metal_nut",
+    "screw",
+    "toothbrush",
+    "wood",
+    "zipper"
+  ],
+  "n_new_images_scored": 855,
+  "train_categories": [
+    "bottle",
+    "cable",
+    "hazelnut",
+    "pill",
+    "tile",
+    "transistor"
+  ],
+  "support": "train EXCEPTION images (10/category), disjoint from test 15 anomalies",
+  "test": "10 good + 15 anomalies per category (225 total)",
+  "calibration": "20 normals/category; zero-label policies use all 20 for the threshold, few-shot policies use 10 fit / 10 threshold",
+  "transfer_control": "global model sees only six seen categories; no new-category labels",
+  "historical_exposure": "the nine categories were not scored by v3.1 local PatchCore/CLIP, but results/mvtec_ad_surface.json already lists all 15 AD categories in a prior surface experiment; all 225 held-out test images overlap that prior run exactly. This is a v3.1-pipeline holdout, not an organizationally blind holdout.",
+  "fewshot": "1/2/5/10 labeled anomaly corrections per new category; 3 seeds",
+  "metric_learning": "PCA32 + NCA(8) on CLIP RN50 embeddings, 1-NN; CPU only",
+  "caveat": "MVTec AD categories are distinct objects; image-level split, no physical unit IDs"
+}

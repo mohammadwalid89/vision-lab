@@ -1,0 +1,21 @@
+{
+ "category": "juice_bottle",
+ "dev_auc_unseen_kits": {
+  "start_head": 0.8405,
+  "random_edits_same_budget": 0.8488,
+  "agent_final_head": 0.7907,
+  "trained_linear_head_chapter_14": 0.8879,
+  "n_dev_faulty_good": [43, 28]
+ },
+ "feedback_auc_edit_val": {
+  "start_head": 0.8639,
+  "agent_final_head": 0.9156,
+  "random_edits_same_budget": 0.8866,
+  "agent_last_scored_candidate_call_18": 0.9244,
+  "n_edit_val_faulty": 23,
+  "n_edit_val_total": 92
+ },
+ "scoring_calls_used": 18,
+ "scoring_call_budget": 50,
+ "final_head_relative_l2_change": 0.876
+}

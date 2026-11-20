@@ -1,0 +1,51 @@
+{
+ "v2_lessons": {
+  "n_tasks": 11,
+  "tasks": [
+   "cifar10_0",
+   "eurosat_0",
+   "gtsrb_0",
+   "pets_0",
+   "eurosat_1",
+   "gtsrb_1",
+   "pets_1",
+   "gtsrb_3",
+   "pets_2",
+   "gtsrb_4",
+   "pets_3"
+  ],
+  "scoring_calls_per_task": [
+   2,
+   2,
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  "agent_minus_start_points": 8.35,
+  "agent_beats_start_on": 11,
+  "agent_minus_placebo_points": 7.27,
+  "agent_vs_placebo_win_tie_loss": [
+   11,
+   0,
+   0
+  ],
+  "agent_minus_trained_fit_plus_feedback_points": 0.08,
+  "agent_vs_trained_fit_plus_feedback_win_tie_loss": [
+   6,
+   3,
+   2
+  ],
+  "agent_minus_trained_tuned_points": 0.6,
+  "agent_vs_trained_tuned_win_tie_loss": [
+   9,
+   0,
+   2
+  ]
+ }
+}

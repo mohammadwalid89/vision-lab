@@ -1,0 +1,29 @@
+{
+ "category": "juice_bottle",
+ "n_images": 71,
+ "roles": {
+  "eval_good": 28,
+  "eval_logical": 43
+ },
+ "primary": {
+  "alpha": 0.5,
+  "target_fpr": 0.01
+ },
+ "auc": {
+  "programmed_a1.0": 0.7471,
+  "programmed_a0.5": 0.8223,
+  "programmed_a0.25": 0.8223,
+  "programmed_a0.0": 0.8231,
+  "learned_only_mlp": 0.8804,
+  "learned_part_only": 0.8231,
+  "linear_head": 0.8879,
+  "patch_knn": 0.7243,
+  "written_shuffled": 0.4527,
+  "written_uniform": 0.7479,
+  "check_presence": 0.6395,
+  "check_count": 0.5814,
+  "check_position": 0.5897,
+  "check_extent": 0.5581,
+  "check_cooccurrence": 0.7168
+ }
+}

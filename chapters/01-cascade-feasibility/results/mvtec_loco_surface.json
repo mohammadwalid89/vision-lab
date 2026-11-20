@@ -1,0 +1,793 @@
+{
+  "dataset": "mvtec_loco",
+  "revision": "839fee8178c10d2e50afddc671238ba85d9975d9",
+  "categories": [
+    "breakfast_box",
+    "juice_bottle",
+    "pushpins",
+    "screw_bag",
+    "splicing_connectors"
+  ],
+  "runs": [
+    {
+      "seed": 11,
+      "run_id": "eb8c1e27-991b-4ae6-8072-f8921ea4432e",
+      "metrics": {
+        "n": 125,
+        "resolved": 41,
+        "coverage": 0.328,
+        "coverage_ci95": [
+          0.2519,
+          0.4144
+        ],
+        "accuracy_resolved": 0.5366,
+        "accuracy_ci95": [
+          0.3875,
+          0.6794
+        ],
+        "wrong_auto_accept": 19,
+        "wrong_auto_accept_rate_ci95": [
+          0.0995,
+          0.2252
+        ],
+        "wrong_auto_accept_per_10k": 1520.0,
+        "exception_recall": 0.0,
+        "exception_recall_ci95": [
+          0,
+          0.0487
+        ],
+        "queued": 84,
+        "recapture_requested": 0,
+        "resolved_by": {
+          "L1": 41,
+          "HUMAN": 84
+        },
+        "latency_p50_ms": 110.09,
+        "latency_p95_ms": 158.18,
+        "neurons_total": 0,
+        "label": "measured_public_subset_public_test"
+      },
+      "categories": {
+        "breakfast_box": {
+          "metrics": {
+            "n": 25,
+            "resolved": 8,
+            "coverage": 0.32,
+            "coverage_ci95": [
+              0.172,
+              0.5159
+            ],
+            "accuracy_resolved": 0.75,
+            "accuracy_ci95": [
+              0.4093,
+              0.9285
+            ],
+            "wrong_auto_accept": 2,
+            "wrong_auto_accept_rate_ci95": [
+              0.0222,
+              0.2497
+            ],
+            "wrong_auto_accept_per_10k": 800.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 17,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "L1": 8,
+              "HUMAN": 17
+            },
+            "latency_p50_ms": 130.89,
+            "latency_p95_ms": 160.53,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.05187399685382843,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "juice_bottle": {
+          "metrics": {
+            "n": 25,
+            "resolved": 13,
+            "coverage": 0.52,
+            "coverage_ci95": [
+              0.335,
+              0.6997
+            ],
+            "accuracy_resolved": 0.5385,
+            "accuracy_ci95": [
+              0.2914,
+              0.7679
+            ],
+            "wrong_auto_accept": 6,
+            "wrong_auto_accept_rate_ci95": [
+              0.115,
+              0.4343
+            ],
+            "wrong_auto_accept_per_10k": 2400.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 12,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "L1": 13,
+              "HUMAN": 12
+            },
+            "latency_p50_ms": 89.41,
+            "latency_p95_ms": 102.0,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.02806222252547741,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "pushpins": {
+          "metrics": {
+            "n": 25,
+            "resolved": 8,
+            "coverage": 0.32,
+            "coverage_ci95": [
+              0.172,
+              0.5159
+            ],
+            "accuracy_resolved": 0.5,
+            "accuracy_ci95": [
+              0.2152,
+              0.7848
+            ],
+            "wrong_auto_accept": 4,
+            "wrong_auto_accept_rate_ci95": [
+              0.064,
+              0.3465
+            ],
+            "wrong_auto_accept_per_10k": 1600.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 17,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "HUMAN": 17,
+              "L1": 8
+            },
+            "latency_p50_ms": 107.33,
+            "latency_p95_ms": 116.27,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.044935259968042374,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "screw_bag": {
+          "metrics": {
+            "n": 25,
+            "resolved": 0,
+            "coverage": 0.0,
+            "coverage_ci95": [
+              0,
+              0.1332
+            ],
+            "accuracy_resolved": null,
+            "accuracy_ci95": null,
+            "wrong_auto_accept": 0,
+            "wrong_auto_accept_rate_ci95": [
+              0,
+              0.1332
+            ],
+            "wrong_auto_accept_per_10k": 0.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 25,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "HUMAN": 25
+            },
+            "latency_p50_ms": 106.75,
+            "latency_p95_ms": 116.24,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.13628612458705902,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "splicing_connectors": {
+          "metrics": {
+            "n": 25,
+            "resolved": 12,
+            "coverage": 0.48,
+            "coverage_ci95": [
+              0.3003,
+              0.665
+            ],
+            "accuracy_resolved": 0.4167,
+            "accuracy_ci95": [
+              0.1933,
+              0.6805
+            ],
+            "wrong_auto_accept": 7,
+            "wrong_auto_accept_rate_ci95": [
+              0.1428,
+              0.4758
+            ],
+            "wrong_auto_accept_per_10k": 2800.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 13,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "HUMAN": 13,
+              "L1": 12
+            },
+            "latency_p50_ms": 124.34,
+            "latency_p95_ms": 180.91,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.016336245462298393,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        }
+      }
+    },
+    {
+      "seed": 23,
+      "run_id": "497ee70e-fb86-449d-8f31-42d86414104a",
+      "metrics": {
+        "n": 125,
+        "resolved": 46,
+        "coverage": 0.368,
+        "coverage_ci95": [
+          0.2886,
+          0.4553
+        ],
+        "accuracy_resolved": 0.5,
+        "accuracy_ci95": [
+          0.3612,
+          0.6388
+        ],
+        "wrong_auto_accept": 23,
+        "wrong_auto_accept_rate_ci95": [
+          0.1259,
+          0.261
+        ],
+        "wrong_auto_accept_per_10k": 1840.0,
+        "exception_recall": 0.0,
+        "exception_recall_ci95": [
+          0,
+          0.0487
+        ],
+        "queued": 79,
+        "recapture_requested": 0,
+        "resolved_by": {
+          "L1": 46,
+          "HUMAN": 79
+        },
+        "latency_p50_ms": 110.09,
+        "latency_p95_ms": 158.18,
+        "neurons_total": 0,
+        "label": "measured_public_subset_public_test"
+      },
+      "categories": {
+        "breakfast_box": {
+          "metrics": {
+            "n": 25,
+            "resolved": 10,
+            "coverage": 0.4,
+            "coverage_ci95": [
+              0.234,
+              0.5926
+            ],
+            "accuracy_resolved": 0.7,
+            "accuracy_ci95": [
+              0.3968,
+              0.8922
+            ],
+            "wrong_auto_accept": 3,
+            "wrong_auto_accept_rate_ci95": [
+              0.0417,
+              0.2996
+            ],
+            "wrong_auto_accept_per_10k": 1200.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 15,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "L1": 10,
+              "HUMAN": 15
+            },
+            "latency_p50_ms": 130.89,
+            "latency_p95_ms": 160.53,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.05187399685382843,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "juice_bottle": {
+          "metrics": {
+            "n": 25,
+            "resolved": 19,
+            "coverage": 0.76,
+            "coverage_ci95": [
+              0.5657,
+              0.885
+            ],
+            "accuracy_resolved": 0.5263,
+            "accuracy_ci95": [
+              0.3171,
+              0.7267
+            ],
+            "wrong_auto_accept": 9,
+            "wrong_auto_accept_rate_ci95": [
+              0.2025,
+              0.5548
+            ],
+            "wrong_auto_accept_per_10k": 3600.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 6,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "L1": 19,
+              "HUMAN": 6
+            },
+            "latency_p50_ms": 89.41,
+            "latency_p95_ms": 102.0,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.02806222252547741,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "pushpins": {
+          "metrics": {
+            "n": 25,
+            "resolved": 3,
+            "coverage": 0.12,
+            "coverage_ci95": [
+              0.0417,
+              0.2996
+            ],
+            "accuracy_resolved": 0.6667,
+            "accuracy_ci95": [
+              0.2077,
+              0.9385
+            ],
+            "wrong_auto_accept": 1,
+            "wrong_auto_accept_rate_ci95": [
+              0.0071,
+              0.1954
+            ],
+            "wrong_auto_accept_per_10k": 400.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 22,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "HUMAN": 22,
+              "L1": 3
+            },
+            "latency_p50_ms": 107.33,
+            "latency_p95_ms": 116.27,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.044935259968042374,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "screw_bag": {
+          "metrics": {
+            "n": 25,
+            "resolved": 12,
+            "coverage": 0.48,
+            "coverage_ci95": [
+              0.3003,
+              0.665
+            ],
+            "accuracy_resolved": 0.25,
+            "accuracy_ci95": [
+              0.0889,
+              0.5323
+            ],
+            "wrong_auto_accept": 9,
+            "wrong_auto_accept_rate_ci95": [
+              0.2025,
+              0.5548
+            ],
+            "wrong_auto_accept_per_10k": 3600.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 13,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "HUMAN": 13,
+              "L1": 12
+            },
+            "latency_p50_ms": 106.75,
+            "latency_p95_ms": 116.24,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.13628612458705902,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "splicing_connectors": {
+          "metrics": {
+            "n": 25,
+            "resolved": 2,
+            "coverage": 0.08,
+            "coverage_ci95": [
+              0.0222,
+              0.2497
+            ],
+            "accuracy_resolved": 0.5,
+            "accuracy_ci95": [
+              0.0945,
+              0.9055
+            ],
+            "wrong_auto_accept": 1,
+            "wrong_auto_accept_rate_ci95": [
+              0.0071,
+              0.1954
+            ],
+            "wrong_auto_accept_per_10k": 400.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 23,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "HUMAN": 23,
+              "L1": 2
+            },
+            "latency_p50_ms": 124.34,
+            "latency_p95_ms": 180.91,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.016336245462298393,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        }
+      }
+    },
+    {
+      "seed": 47,
+      "run_id": "03aa1c37-3692-4e68-880e-bb2c6a4feb58",
+      "metrics": {
+        "n": 125,
+        "resolved": 48,
+        "coverage": 0.384,
+        "coverage_ci95": [
+          0.3034,
+          0.4715
+        ],
+        "accuracy_resolved": 0.5208,
+        "accuracy_ci95": [
+          0.3833,
+          0.6553
+        ],
+        "wrong_auto_accept": 23,
+        "wrong_auto_accept_rate_ci95": [
+          0.1259,
+          0.261
+        ],
+        "wrong_auto_accept_per_10k": 1840.0,
+        "exception_recall": 0.0,
+        "exception_recall_ci95": [
+          0,
+          0.0487
+        ],
+        "queued": 77,
+        "recapture_requested": 0,
+        "resolved_by": {
+          "HUMAN": 77,
+          "L1": 48
+        },
+        "latency_p50_ms": 110.09,
+        "latency_p95_ms": 158.18,
+        "neurons_total": 0,
+        "label": "measured_public_subset_public_test"
+      },
+      "categories": {
+        "breakfast_box": {
+          "metrics": {
+            "n": 25,
+            "resolved": 2,
+            "coverage": 0.08,
+            "coverage_ci95": [
+              0.0222,
+              0.2497
+            ],
+            "accuracy_resolved": 0.5,
+            "accuracy_ci95": [
+              0.0945,
+              0.9055
+            ],
+            "wrong_auto_accept": 1,
+            "wrong_auto_accept_rate_ci95": [
+              0.0071,
+              0.1954
+            ],
+            "wrong_auto_accept_per_10k": 400.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 23,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "HUMAN": 23,
+              "L1": 2
+            },
+            "latency_p50_ms": 130.89,
+            "latency_p95_ms": 160.53,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.05187399685382843,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "juice_bottle": {
+          "metrics": {
+            "n": 25,
+            "resolved": 13,
+            "coverage": 0.52,
+            "coverage_ci95": [
+              0.335,
+              0.6997
+            ],
+            "accuracy_resolved": 0.5385,
+            "accuracy_ci95": [
+              0.2914,
+              0.7679
+            ],
+            "wrong_auto_accept": 6,
+            "wrong_auto_accept_rate_ci95": [
+              0.115,
+              0.4343
+            ],
+            "wrong_auto_accept_per_10k": 2400.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 12,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "L1": 13,
+              "HUMAN": 12
+            },
+            "latency_p50_ms": 89.41,
+            "latency_p95_ms": 102.0,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.02806222252547741,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "pushpins": {
+          "metrics": {
+            "n": 25,
+            "resolved": 7,
+            "coverage": 0.28,
+            "coverage_ci95": [
+              0.1428,
+              0.4758
+            ],
+            "accuracy_resolved": 0.4286,
+            "accuracy_ci95": [
+              0.1582,
+              0.7495
+            ],
+            "wrong_auto_accept": 4,
+            "wrong_auto_accept_rate_ci95": [
+              0.064,
+              0.3465
+            ],
+            "wrong_auto_accept_per_10k": 1600.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 18,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "HUMAN": 18,
+              "L1": 7
+            },
+            "latency_p50_ms": 107.33,
+            "latency_p95_ms": 116.27,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.044935259968042374,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "screw_bag": {
+          "metrics": {
+            "n": 25,
+            "resolved": 11,
+            "coverage": 0.44,
+            "coverage_ci95": [
+              0.2667,
+              0.6293
+            ],
+            "accuracy_resolved": 0.6364,
+            "accuracy_ci95": [
+              0.3538,
+              0.8483
+            ],
+            "wrong_auto_accept": 4,
+            "wrong_auto_accept_rate_ci95": [
+              0.064,
+              0.3465
+            ],
+            "wrong_auto_accept_per_10k": 1600.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 14,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "L1": 11,
+              "HUMAN": 14
+            },
+            "latency_p50_ms": 106.75,
+            "latency_p95_ms": 116.24,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.13628612458705902,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        },
+        "splicing_connectors": {
+          "metrics": {
+            "n": 25,
+            "resolved": 15,
+            "coverage": 0.6,
+            "coverage_ci95": [
+              0.4074,
+              0.766
+            ],
+            "accuracy_resolved": 0.4667,
+            "accuracy_ci95": [
+              0.2481,
+              0.6988
+            ],
+            "wrong_auto_accept": 8,
+            "wrong_auto_accept_rate_ci95": [
+              0.172,
+              0.5159
+            ],
+            "wrong_auto_accept_per_10k": 3200.0,
+            "exception_recall": 0.0,
+            "exception_recall_ci95": [
+              0,
+              0.2039
+            ],
+            "queued": 10,
+            "recapture_requested": 0,
+            "resolved_by": {
+              "L1": 15,
+              "HUMAN": 10
+            },
+            "latency_p50_ms": 124.34,
+            "latency_p95_ms": 180.91,
+            "neurons_total": 0,
+            "label": "synthetic_sealed_demo"
+          },
+          "t_a": 0.016336245462298393,
+          "calibration_false_alarm": 1,
+          "calibration_good_n": 20,
+          "calibration_false_alarm_wilson95": [
+            0.0089,
+            0.2361
+          ]
+        }
+      }
+    }
+  ],
+  "limitation": "experimental fusion; source scene paths and perceptual hashes disjoint, physical unit identity unavailable"
+}

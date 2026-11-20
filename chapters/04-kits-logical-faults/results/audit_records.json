@@ -1,0 +1,1742 @@
+{
+  "audit_time_utc": "2026-11-13T11:58:13Z",
+  "candidates": [
+    {
+      "candidate": "component",
+      "components": [
+        "component"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 143.4359810082242,
+        "p95_ms": 185.75632502324876
+      },
+      "dev_full": {
+        "defects_held": 35,
+        "defects_to_person": 114,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.0028965629705329887,
+          0.0833744665669055
+        ],
+        "good_release_rate": 0.023809523809523808,
+        "good_released": 2,
+        "good_releases_per_1000_good": 23.80952380952381,
+        "good_to_person": 82,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 971.9686800894855,
+        "usd_per_1000": 242.99217002237137
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 35,
+        "defects_to_person": 114,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.0028965629705329887,
+          0.0833744665669055
+        ],
+        "good_release_rate": 0.023809523809523808,
+        "good_released": 2,
+        "good_to_person": 82,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 971.9686800894855,
+        "usd_per_1000": 242.99217002237137
+      },
+      "dev_hold_threshold_ah": 0.02,
+      "dev_oos_any_escape_fraction": 0.73,
+      "dev_oos_good_release_p05_p95": [
+        0.0,
+        0.11627906976744186
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 274.9249082007344,
+      "dev_oos_mean_escape_rate": 0.018157894736842106,
+      "dev_oos_mean_good_release": 0.04837209302325582,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 0.8909090909090909,
+        "splicing_connectors": 0.9836065573770492
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.019643782952651675,
+          "escapes": 0,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.038158510711545454,
+          "escapes": 0,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 58,
+        "defects_to_person": 170,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.013053234471903465,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.0001962428192559853,
+          0.04243342506529924
+        ],
+        "good_release_rate": 0.007751937984496124,
+        "good_released": 1,
+        "good_releases_per_1000_good": 7.751937984496124,
+        "good_to_person": 128,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 987.3153814769482,
+        "usd_per_1000": 246.82884536923706
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 42,
+          "defects_to_person": 73,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.025713475748387855,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.00044407344008939235,
+            0.09391684189191078
+          ],
+          "good_release_rate": 0.017543859649122806,
+          "good_released": 1,
+          "good_releases_per_1000_good": 17.54385964912281,
+          "good_to_person": 56,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 975.5026697177725,
+          "usd_per_1000": 243.87566742944313
+        },
+        "splicing_connectors": {
+          "defects_held": 16,
+          "defects_to_person": 97,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.026162575993197205,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.0,
+            0.049944083705854674
+          ],
+          "good_release_rate": 0.0,
+          "good_released": 0,
+          "good_releases_per_1000_good": 0.0,
+          "good_to_person": 72,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 997.1681415929203,
+          "usd_per_1000": 249.29203539823007
+        }
+      }
+    },
+    {
+      "candidate": "relational",
+      "components": [
+        "relational"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 143.4359810082242,
+        "p95_ms": 185.75632502324876
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.0,
+          0.04296491962956506
+        ],
+        "good_release_rate": 0.0,
+        "good_released": 0,
+        "good_releases_per_1000_good": 0.0,
+        "good_to_person": 84,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 1000.0,
+        "usd_per_1000": 250.0
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.0,
+          0.04296491962956506
+        ],
+        "good_release_rate": 0.0,
+        "good_released": 0,
+        "good_to_person": 84,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 1000.0,
+        "usd_per_1000": 250.0
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.63,
+      "dev_oos_good_release_p05_p95": [
+        0.0,
+        0.16395348837209298
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 288.75537025703795,
+      "dev_oos_mean_escape_rate": 0.02039473684210526,
+      "dev_oos_mean_good_release": 0.04232558139534884,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 1.0,
+        "splicing_connectors": 1.0
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.019643782952651675,
+          "escapes": 0,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.038158510711545454,
+          "escapes": 0,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 228,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.013053234471903465,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.0,
+          0.028190969749726368
+        ],
+        "good_release_rate": 0.0,
+        "good_released": 0,
+        "good_releases_per_1000_good": 0.0,
+        "good_to_person": 129,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 1000.0,
+        "usd_per_1000": 250.0
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 115,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.025713475748387855,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.0,
+            0.06266748091448493
+          ],
+          "good_release_rate": 0.0,
+          "good_released": 0,
+          "good_releases_per_1000_good": 0.0,
+          "good_to_person": 57,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 1000.0,
+          "usd_per_1000": 250.0
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 113,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.026162575993197205,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.0,
+            0.049944083705854674
+          ],
+          "good_release_rate": 0.0,
+          "good_released": 0,
+          "good_releases_per_1000_good": 0.0,
+          "good_to_person": 72,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 1000.0,
+          "usd_per_1000": 250.0
+        }
+      }
+    },
+    {
+      "candidate": "resnet",
+      "components": [
+        "resnet"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 102.61664004065096,
+        "p95_ms": 139.14897935464975
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.01960757823215596,
+          0.13346573291396713
+        ],
+        "good_release_rate": 0.05952380952380952,
+        "good_released": 5,
+        "good_releases_per_1000_good": 59.523809523809526,
+        "good_to_person": 79,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 941.6666666666666,
+        "usd_per_1000": 235.41666666666666
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.01960757823215596,
+          0.13346573291396713
+        ],
+        "good_release_rate": 0.05952380952380952,
+        "good_released": 5,
+        "good_to_person": 79,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 941.6666666666666,
+        "usd_per_1000": 235.41666666666666
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.78,
+      "dev_oos_good_release_p05_p95": [
+        0.046511627906976744,
+        0.3488372093023256
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 262.8616585067319,
+      "dev_oos_mean_escape_rate": 0.02697368421052631,
+      "dev_oos_mean_good_release": 0.1711627906976744,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 1.0,
+        "splicing_connectors": 0.9180327868852459
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.04110486471242841,
+          "escapes": 2,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.06013094819774175,
+          "escapes": 1,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 225,
+        "escape_rate": 0.013157894736842105,
+        "escape_ucb95": 0.033654204982451946,
+        "escapes": 3,
+        "escapes_by_stratum": {
+          "logical_anomalies": 2,
+          "structural_anomalies": 1
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.008511930653089705,
+          0.07748898992651176
+        ],
+        "good_release_rate": 0.031007751937984496,
+        "good_released": 4,
+        "good_releases_per_1000_good": 31.007751937984494,
+        "good_to_person": 125,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 969.3492452060383,
+        "usd_per_1000": 255.49520603835168
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 115,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.025713475748387855,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.0,
+            0.06266748091448493
+          ],
+          "good_release_rate": 0.0,
+          "good_released": 0,
+          "good_releases_per_1000_good": 0.0,
+          "good_to_person": 57,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 1000.0,
+          "usd_per_1000": 250.0
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 110,
+          "escape_rate": 0.02654867256637168,
+          "escape_ucb95": 0.06718505257024557,
+          "escapes": 3,
+          "escapes_by_stratum": {
+            "logical_anomalies": 2,
+            "structural_anomalies": 1
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.0153425371111306,
+            0.136178649312924
+          ],
+          "good_release_rate": 0.05555555555555555,
+          "good_released": 4,
+          "good_releases_per_1000_good": 55.55555555555556,
+          "good_to_person": 68,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 945.024582104228,
+          "usd_per_1000": 262.80481809242866
+        }
+      }
+    },
+    {
+      "candidate": "wrn",
+      "components": [
+        "wrn"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 275.8047559764236,
+        "p95_ms": 461.05454277712835
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.07605370643259633,
+          0.23624949427787717
+        ],
+        "good_release_rate": 0.14285714285714285,
+        "good_released": 12,
+        "good_releases_per_1000_good": 142.85714285714286,
+        "good_to_person": 72,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 860.0,
+        "usd_per_1000": 215.0
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.07605370643259633,
+          0.23624949427787717
+        ],
+        "good_release_rate": 0.14285714285714285,
+        "good_released": 12,
+        "good_to_person": 72,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 860.0,
+        "usd_per_1000": 215.0
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.73,
+      "dev_oos_good_release_p05_p95": [
+        0.11627906976744186,
+        0.3953488372093023
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 255.48925948592412,
+      "dev_oos_mean_escape_rate": 0.025526315789473678,
+      "dev_oos_mean_good_release": 0.21953488372093016,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 0.43636363636363634,
+        "splicing_connectors": 0.9344262295081968
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.04110486471242841,
+          "escapes": 2,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.06013094819774175,
+          "escapes": 1,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 225,
+        "escape_rate": 0.013157894736842105,
+        "escape_ucb95": 0.033654204982451946,
+        "escapes": 3,
+        "escapes_by_stratum": {
+          "logical_anomalies": 2,
+          "structural_anomalies": 1
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.1426927280247545,
+          0.2897197340790044
+        ],
+        "good_release_rate": 0.20930232558139536,
+        "good_released": 27,
+        "good_releases_per_1000_good": 209.30232558139534,
+        "good_to_person": 102,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 794.6205630354957,
+        "usd_per_1000": 211.813035495716
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 113,
+          "escape_rate": 0.017391304347826087,
+          "escape_ucb95": 0.05373242977794422,
+          "escapes": 2,
+          "escapes_by_stratum": {
+            "logical_anomalies": 2,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.29143407667324656,
+            0.5591613734215396
+          ],
+          "good_release_rate": 0.42105263157894735,
+          "good_released": 24,
+          "good_releases_per_1000_good": 421.05263157894734,
+          "good_to_person": 33,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 587.0205949656752,
+          "usd_per_1000": 164.14645308924486
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 112,
+          "escape_rate": 0.008849557522123894,
+          "escape_ucb95": 0.041292024314551104,
+          "escapes": 1,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 1
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.008676497316343764,
+            0.11697481982594136
+          ],
+          "good_release_rate": 0.041666666666666664,
+          "good_released": 3,
+          "good_releases_per_1000_good": 41.666666666666664,
+          "good_to_person": 69,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 958.9896755162242,
+          "usd_per_1000": 248.59697640117994
+        }
+      }
+    },
+    {
+      "candidate": "component_wrn",
+      "components": [
+        "component",
+        "wrn"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 411.61972004920244,
+        "p95_ms": 628.6717426497489
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.03416237785396636,
+          0.16418908027079504
+        ],
+        "good_release_rate": 0.08333333333333333,
+        "good_released": 7,
+        "good_releases_per_1000_good": 83.33333333333333,
+        "good_to_person": 77,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 918.3333333333334,
+        "usd_per_1000": 229.58333333333334
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.03416237785396636,
+          0.16418908027079504
+        ],
+        "good_release_rate": 0.08333333333333333,
+        "good_released": 7,
+        "good_to_person": 77,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 918.3333333333334,
+        "usd_per_1000": 229.58333333333334
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.67,
+      "dev_oos_good_release_p05_p95": [
+        0.046511627906976744,
+        0.37209302325581395
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 260.0735159118727,
+      "dev_oos_mean_escape_rate": 0.02434210526315789,
+      "dev_oos_mean_good_release": 0.15046511627906978,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 0.43636363636363634,
+        "splicing_connectors": 0.8852459016393442
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.019643782952651675,
+          "escapes": 0,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.038158510711545454,
+          "escapes": 0,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 228,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.013053234471903465,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.07868037392100206,
+          0.20259463019869742
+        ],
+        "good_release_rate": 0.13178294573643412,
+        "good_released": 17,
+        "good_releases_per_1000_good": 131.7829457364341,
+        "good_to_person": 112,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 870.8527131782946,
+        "usd_per_1000": 217.71317829457365
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 115,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.025713475748387855,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.14126857773596008,
+            0.37761030480194574
+          ],
+          "good_release_rate": 0.24561403508771928,
+          "good_released": 14,
+          "good_releases_per_1000_good": 245.6140350877193,
+          "good_to_person": 43,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 759.2982456140352,
+          "usd_per_1000": 189.8245614035088
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 113,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.026162575993197205,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.008676497316343764,
+            0.11697481982594136
+          ],
+          "good_release_rate": 0.041666666666666664,
+          "good_released": 3,
+          "good_releases_per_1000_good": 41.666666666666664,
+          "good_to_person": 69,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 959.1666666666667,
+          "usd_per_1000": 239.79166666666669
+        }
+      }
+    },
+    {
+      "candidate": "relational_wrn",
+      "components": [
+        "relational",
+        "wrn"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 411.61972004920244,
+        "p95_ms": 628.6717426497489
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.013125072270497211,
+          0.11745697137182962
+        ],
+        "good_release_rate": 0.047619047619047616,
+        "good_released": 4,
+        "good_releases_per_1000_good": 47.61904761904762,
+        "good_to_person": 80,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 953.3333333333333,
+        "usd_per_1000": 238.33333333333331
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.013125072270497211,
+          0.11745697137182962
+        ],
+        "good_release_rate": 0.047619047619047616,
+        "good_released": 4,
+        "good_to_person": 80,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 953.3333333333333,
+        "usd_per_1000": 238.33333333333331
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.67,
+      "dev_oos_good_release_p05_p95": [
+        0.023255813953488372,
+        0.32674418604651156
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 269.7202876376989,
+      "dev_oos_mean_escape_rate": 0.024999999999999994,
+      "dev_oos_mean_good_release": 0.1288372093023256,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 0.43636363636363634,
+        "splicing_connectors": 0.8852459016393442
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.031029531193283187,
+          "escapes": 1,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.07951235212777791,
+          "escapes": 2,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 225,
+        "escape_rate": 0.013157894736842105,
+        "escape_ucb95": 0.033654204982451946,
+        "escapes": 3,
+        "escapes_by_stratum": {
+          "logical_anomalies": 1,
+          "structural_anomalies": 2
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.04333744839585853,
+          0.14745177500154227
+        ],
+        "good_release_rate": 0.08527131782945736,
+        "good_released": 11,
+        "good_releases_per_1000_good": 85.27131782945736,
+        "good_to_person": 118,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 916.1709506323948,
+        "usd_per_1000": 242.20063239494084
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 114,
+          "escape_rate": 0.008695652173913044,
+          "escape_ucb95": 0.040585571425133866,
+          "escapes": 1,
+          "escapes_by_stratum": {
+            "logical_anomalies": 1,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.06259489011728502,
+            0.2579453838681215
+          ],
+          "good_release_rate": 0.14035087719298245,
+          "good_released": 8,
+          "good_releases_per_1000_good": 140.35087719298247,
+          "good_to_person": 49,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 862.282227307399,
+          "usd_per_1000": 224.2662090007628
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 111,
+          "escape_rate": 0.017699115044247787,
+          "escape_ucb95": 0.054665350958205586,
+          "escapes": 2,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 2
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.008676497316343764,
+            0.11697481982594136
+          ],
+          "good_release_rate": 0.041666666666666664,
+          "good_released": 3,
+          "good_releases_per_1000_good": 41.666666666666664,
+          "good_to_person": 69,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 958.8126843657817,
+          "usd_per_1000": 257.4022861356932
+        }
+      }
+    },
+    {
+      "candidate": "component_resnet",
+      "components": [
+        "component",
+        "resnet"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 242.37502901814878,
+        "p95_ms": 316.82446843478823
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.013125072270497211,
+          0.11745697137182962
+        ],
+        "good_release_rate": 0.047619047619047616,
+        "good_released": 4,
+        "good_releases_per_1000_good": 47.61904761904762,
+        "good_to_person": 80,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 953.3333333333333,
+        "usd_per_1000": 238.33333333333331
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.013125072270497211,
+          0.11745697137182962
+        ],
+        "good_release_rate": 0.047619047619047616,
+        "good_released": 4,
+        "good_to_person": 80,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 953.3333333333333,
+        "usd_per_1000": 238.33333333333331
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.84,
+      "dev_oos_good_release_p05_p95": [
+        0.023255813953488372,
+        0.2558139534883721
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 280.05719094247235,
+      "dev_oos_mean_escape_rate": 0.0293421052631579,
+      "dev_oos_mean_good_release": 0.11395348837209303,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 0.6545454545454545,
+        "splicing_connectors": 0.9016393442622951
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.019643782952651675,
+          "escapes": 0,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.038158510711545454,
+          "escapes": 0,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 228,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.013053234471903465,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.017257714320023116,
+          0.09848717378837152
+        ],
+        "good_release_rate": 0.046511627906976744,
+        "good_released": 6,
+        "good_releases_per_1000_good": 46.51162790697674,
+        "good_to_person": 123,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 954.4186046511628,
+        "usd_per_1000": 238.6046511627907
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 115,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.025713475748387855,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.029098582817102384,
+            0.19295733056970338
+          ],
+          "good_release_rate": 0.08771929824561403,
+          "good_released": 5,
+          "good_releases_per_1000_good": 87.71929824561404,
+          "good_to_person": 52,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 914.0350877192982,
+          "usd_per_1000": 228.50877192982455
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 113,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.026162575993197205,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.0003515744052335976,
+            0.07497131085391912
+          ],
+          "good_release_rate": 0.013888888888888888,
+          "good_released": 1,
+          "good_releases_per_1000_good": 13.88888888888889,
+          "good_to_person": 71,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 986.388888888889,
+          "usd_per_1000": 246.59722222222226
+        }
+      }
+    },
+    {
+      "candidate": "relational_resnet",
+      "components": [
+        "relational",
+        "resnet"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 242.37502901814878,
+        "p95_ms": 316.82446843478823
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.04202042654282605,
+          0.1790596532827076
+        ],
+        "good_release_rate": 0.09523809523809523,
+        "good_released": 8,
+        "good_releases_per_1000_good": 95.23809523809524,
+        "good_to_person": 76,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 906.6666666666666,
+        "usd_per_1000": 226.66666666666666
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.04202042654282605,
+          0.1790596532827076
+        ],
+        "good_release_rate": 0.09523809523809523,
+        "good_released": 8,
+        "good_to_person": 76,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 906.6666666666666,
+        "usd_per_1000": 226.66666666666666
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.77,
+      "dev_oos_good_release_p05_p95": [
+        0.046511627906976744,
+        0.37209302325581395
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 263.7542074663403,
+      "dev_oos_mean_escape_rate": 0.024473684210526314,
+      "dev_oos_mean_good_release": 0.1672093023255814,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 0.8,
+        "splicing_connectors": 0.7213114754098361
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.04110486471242841,
+          "escapes": 2,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.13169081380913944,
+          "escapes": 5,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 221,
+        "escape_rate": 0.03070175438596491,
+        "escape_ucb95": 0.056891284877269244,
+        "escapes": 7,
+        "escapes_by_stratum": {
+          "logical_anomalies": 2,
+          "structural_anomalies": 5
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.03779899784730754,
+          0.13794105176517638
+        ],
+        "good_release_rate": 0.07751937984496124,
+        "good_released": 10,
+        "good_releases_per_1000_good": 77.51937984496124,
+        "good_to_person": 119,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 923.4169726642186,
+        "usd_per_1000": 261.55599755201956
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 114,
+          "escape_rate": 0.008695652173913044,
+          "escape_ucb95": 0.040585571425133866,
+          "escapes": 1,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 1
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.010988255898587256,
+            0.14619906431052349
+          ],
+          "good_release_rate": 0.05263157894736842,
+          "good_released": 3,
+          "good_releases_per_1000_good": 52.63157894736842,
+          "good_to_person": 54,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 948.2471395881007,
+          "usd_per_1000": 245.7574370709382
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 107,
+          "escape_rate": 0.05309734513274336,
+          "escape_ucb95": 0.10210514683446177,
+          "escapes": 6,
+          "escapes_by_stratum": {
+            "logical_anomalies": 2,
+            "structural_anomalies": 4
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.0399895009336025,
+            0.19011034044555922
+          ],
+          "good_release_rate": 0.09722222222222222,
+          "good_released": 7,
+          "good_releases_per_1000_good": 97.22222222222223,
+          "good_to_person": 65,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 903.6602753195673,
+          "usd_per_1000": 279.0124139626352
+        }
+      }
+    },
+    {
+      "candidate": "wrn_resnet",
+      "components": [
+        "wrn",
+        "resnet"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 383.6831188527867,
+        "p95_ms": 565.8102472545577
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.04202042654282605,
+          0.1790596532827076
+        ],
+        "good_release_rate": 0.09523809523809523,
+        "good_released": 8,
+        "good_releases_per_1000_good": 95.23809523809524,
+        "good_to_person": 76,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 906.6666666666666,
+        "usd_per_1000": 226.66666666666666
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.04202042654282605,
+          0.1790596532827076
+        ],
+        "good_release_rate": 0.09523809523809523,
+        "good_released": 8,
+        "good_to_person": 76,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 906.6666666666666,
+        "usd_per_1000": 226.66666666666666
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.75,
+      "dev_oos_good_release_p05_p95": [
+        0.06976744186046512,
+        0.39651162790697664
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 256.528641370869,
+      "dev_oos_mean_escape_rate": 0.02539473684210526,
+      "dev_oos_mean_good_release": 0.2067441860465116,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 0.41818181818181815,
+        "splicing_connectors": 0.7540983606557377
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.031029531193283187,
+          "escapes": 1,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.038158510711545454,
+          "escapes": 0,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 227,
+        "escape_rate": 0.0043859649122807015,
+        "escape_ucb95": 0.0206363762123005,
+        "escapes": 1,
+        "escapes_by_stratum": {
+          "logical_anomalies": 1,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.06061721950439302,
+          0.17538332349961672
+        ],
+        "good_release_rate": 0.10852713178294573,
+        "good_released": 14,
+        "good_releases_per_1000_good": 108.52713178294573,
+        "good_to_person": 115,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 893.5556915544677,
+        "usd_per_1000": 227.7748878008976
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 115,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.025713475748387855,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.11379022431635955,
+            0.33887005792652675
+          ],
+          "good_release_rate": 0.21052631578947367,
+          "good_released": 12,
+          "good_releases_per_1000_good": 210.52631578947367,
+          "good_to_person": 45,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 793.6842105263157,
+          "usd_per_1000": 198.42105263157893
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 112,
+          "escape_rate": 0.008849557522123894,
+          "escape_ucb95": 0.041292024314551104,
+          "escapes": 1,
+          "escapes_by_stratum": {
+            "logical_anomalies": 1,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.003381900326173239,
+            0.09676728911341521
+          ],
+          "good_release_rate": 0.027777777777777776,
+          "good_released": 2,
+          "good_releases_per_1000_good": 27.77777777777778,
+          "good_to_person": 70,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 972.6007866273353,
+          "usd_per_1000": 251.99975417895772
+        }
+      }
+    },
+    {
+      "candidate": "all_four",
+      "components": [
+        "component",
+        "relational",
+        "resnet",
+        "wrn"
+      ],
+      "cpu_latency": {
+        "method": "measured sequential CPU model scoring; excludes gate check and UI",
+        "n": 357,
+        "p50_ms": 521.3127209572122,
+        "p95_ms": 734.2533231014386
+      },
+      "dev_full": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.007426583122552704,
+          0.10084231157418003
+        ],
+        "good_release_rate": 0.03571428571428571,
+        "good_released": 3,
+        "good_releases_per_1000_good": 35.714285714285715,
+        "good_to_person": 81,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 965.0,
+        "usd_per_1000": 241.25
+      },
+      "dev_full_rebuilt": {
+        "defects_held": 0,
+        "defects_to_person": 149,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.019904816220685077,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "gate_acceptance_rebuilt": {
+          "juice_bottle": {
+            "defect": 65,
+            "good": 37
+          },
+          "splicing_connectors": {
+            "defect": 62,
+            "good": 43
+          }
+        },
+        "good_release_ci95": [
+          0.007426583122552704,
+          0.10084231157418003
+        ],
+        "good_release_rate": 0.03571428571428571,
+        "good_released": 3,
+        "good_to_person": 81,
+        "matches_published_dev": true,
+        "n_defect": 149,
+        "n_good": 84,
+        "person_reviews_per_1000": 965.0,
+        "usd_per_1000": 241.25
+      },
+      "dev_hold_threshold_ah": 0.0,
+      "dev_oos_any_escape_fraction": 0.77,
+      "dev_oos_good_release_p05_p95": [
+        0.0,
+        0.3732558139534883
+      ],
+      "dev_oos_mean_cost_usd_per_1000": 264.11419828641374,
+      "dev_oos_mean_escape_rate": 0.027499999999999997,
+      "dev_oos_mean_good_release": 0.15511627906976747,
+      "dev_release_threshold_ar": {
+        "juice_bottle": 0.41818181818181815,
+        "splicing_connectors": 0.7213114754098361
+      },
+      "final_by_defect_stratum": {
+        "logical_anomalies": {
+          "escape_ucb95": 0.019643782952651675,
+          "escapes": 0,
+          "n": 151
+        },
+        "structural_anomalies": {
+          "escape_ucb95": 0.038158510711545454,
+          "escapes": 0,
+          "n": 77
+        }
+      },
+      "final_overall": {
+        "defects_held": 0,
+        "defects_to_person": 228,
+        "escape_rate": 0.0,
+        "escape_ucb95": 0.013053234471903465,
+        "escapes": 0,
+        "escapes_by_stratum": {
+          "logical_anomalies": 0,
+          "structural_anomalies": 0
+        },
+        "false_holds": 0,
+        "good_release_ci95": [
+          0.008511930653089705,
+          0.07748898992651176
+        ],
+        "good_release_rate": 0.031007751937984496,
+        "good_released": 4,
+        "good_releases_per_1000_good": 31.007751937984494,
+        "good_to_person": 125,
+        "n_defect": 228,
+        "n_good": 129,
+        "person_reviews_per_1000": 969.6124031007752,
+        "usd_per_1000": 242.4031007751938
+      },
+      "final_per_category": {
+        "juice_bottle": {
+          "defects_held": 0,
+          "defects_to_person": 115,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.025713475748387855,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.010988255898587256,
+            0.14619906431052349
+          ],
+          "good_release_rate": 0.05263157894736842,
+          "good_released": 3,
+          "good_releases_per_1000_good": 52.63157894736842,
+          "good_to_person": 54,
+          "n_defect": 115,
+          "n_good": 57,
+          "person_reviews_per_1000": 948.421052631579,
+          "usd_per_1000": 237.10526315789474
+        },
+        "splicing_connectors": {
+          "defects_held": 0,
+          "defects_to_person": 113,
+          "escape_rate": 0.0,
+          "escape_ucb95": 0.026162575993197205,
+          "escapes": 0,
+          "escapes_by_stratum": {
+            "logical_anomalies": 0,
+            "structural_anomalies": 0
+          },
+          "false_holds": 0,
+          "good_release_ci95": [
+            0.0003515744052335976,
+            0.07497131085391912
+          ],
+          "good_release_rate": 0.013888888888888888,
+          "good_released": 1,
+          "good_releases_per_1000_good": 13.88888888888889,
+          "good_to_person": 71,
+          "n_defect": 113,
+          "n_good": 72,
+          "person_reviews_per_1000": 986.388888888889,
+          "usd_per_1000": 246.59722222222226
+        }
+      }
+    }
+  ],
+  "dev_oos_escape_range": [
+    0.018157894736842106,
+    0.0293421052631579
+  ],
+  "dev_score_sha256_all_match": true,
+  "dev_score_sha256_check": {
+    "p3_component_relational_juice_bottle_dev.json": true,
+    "p3_component_relational_splicing_connectors_dev.json": true,
+    "p3_resnet_juice_bottle_dev.json": true,
+    "p3_resnet_splicing_connectors_dev.json": true,
+    "p3_wrn_juice_bottle_dev.json": true,
+    "p3_wrn_splicing_connectors_dev.json": true
+  },
+  "fallback": "all-human/no-release",
+  "final_n": 357,
+  "no_candidate_qualified": true,
+  "read_files": {
+    "AUDIT_PHASE3.md": "6e21b034d8c52ab62bc238de78d50f44076b104aed6784513efcab5104487b37",
+    "FINAL_PHASE3_EVALUATION.md": "fb7cb2f072a992d599da6d32eb8c5ba0c250cb7fbcec4acc85c08e61035558eb",
+    "PREREGISTRATION.md": "243e35cb48cd0f05f0b896dc3a5739706e56d7e4c64e73409f47bfe7c59e7fc5",
+    "out/p3_final_results.json": "bcffd4f76ec09387ec16a9821cbbc273326332b903f7a963eb1495c8fe190086",
+    "out/p3_frozen_policy.json": "e102abd060c86d8f790fff2631b294a3630ccc477817731202ce99821b90fff0",
+    "out/p3_split_manifest.json": "5b4613358ed45f92894743c1238f8ce82941cdde06309aafd51cdac2bca47a35"
+  },
+  "rebuilt_dev_matches_published": {
+    "all_four": true,
+    "component": true,
+    "component_resnet": true,
+    "component_wrn": true,
+    "relational": true,
+    "relational_resnet": true,
+    "relational_wrn": true,
+    "resnet": true,
+    "wrn": true,
+    "wrn_resnet": true
+  },
+  "selection_rule": "lowest 100-half-split OOS cost among mean OOS escape<=1%; full-dev zero-escape release threshold",
+  "selection_threshold_dev_oos_escape": 0.01,
+  "winner": null
+}

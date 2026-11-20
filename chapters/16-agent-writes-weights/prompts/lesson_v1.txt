@@ -1,0 +1,1 @@
+TEST_RESULT.json now shows how your final head and the start head did on the unseen test images (accuracy and AUC), next to random edits (placebo). Compare with what you expected in NOTES.md. Append ONE lesson (max 120 words) to LESSONS.md in this folder: what transferred, what did not, and what to do differently next time. Concrete, no repetition of earlier lessons.

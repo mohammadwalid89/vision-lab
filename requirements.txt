@@ -1,0 +1,27 @@
+# Versions from the environment the chapter checks ran in (CPU builds of torch/torchvision).
+# Core
+numpy==2.3.5
+scipy==1.18.1
+scikit-learn==1.9.1
+pillow==12.3.0
+torch==2.14.1
+torchvision==0.29.1
+
+# Encoders: SigLIP2 (transformers), DINOv2 (timm), chapters 11-16
+transformers==5.20.2
+timm==1.0.30
+safetensors==0.8.0
+
+# Cascade-era chapters 01, 02, 07
+anomalib==2.7.0
+openai-clip==1.0.1
+opencv-python==5.0.0.93
+paddleocr==3.7.0
+paddlepaddle==3.3.1
+ultralytics==8.4.184
+requests==2.34.2
+
+# Tests
+pytest==9.1.1
+
+# Chapter 09 also needs Mirage 4.0.1 (Apache-2.0, imported as `cactus`), installed from its own release.

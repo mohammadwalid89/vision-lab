@@ -1,0 +1,61 @@
+{
+ "state": "paused_by_owner",
+ "preflight_boxes": {
+  "images": 3,
+  "conf": 0.25,
+  "iou": 0.5,
+  "gt_objects": 476,
+  "mirage_target_boxes": 18,
+  "tp": 1,
+  "fp": 17,
+  "fn": 475,
+  "per_image": {
+   "0000209_00609_d_0000221": {
+    "gt_objects": 1,
+    "mirage_target_boxes": 10,
+    "tp": 0,
+    "fp": 10,
+    "fn": 1
+   },
+   "0000157_00451_d_0000082": {
+    "gt_objects": 61,
+    "mirage_target_boxes": 5,
+    "tp": 1,
+    "fp": 4,
+    "fn": 60
+   },
+   "0000126_11844_d_0000130": {
+    "gt_objects": 414,
+    "mirage_target_boxes": 3,
+    "tp": 0,
+    "fp": 3,
+    "fn": 414
+   }
+  },
+  "source_of_totals": "score_preflight.py on the stored probe output; matches STATUS.json verified_preflight_result"
+ },
+ "status_json_preflight": {
+  "images": 3,
+  "box_tp": 1,
+  "box_fp": 17,
+  "box_fn": 475,
+  "gt_objects": 476,
+  "note": "Preflight only; no frozen-benchmark result"
+ },
+ "frozen_split": {
+  "pool": 128,
+  "dev": 24,
+  "train": 12,
+  "unused": 92
+ },
+ "mirage_latency_note": [
+  "Mirage latency ~160-216 s/image; 36 frozen images selected; 92 pool images unused by design."
+ ],
+ "arms_run": [],
+ "arms_unrun": [
+  "B0 frozen 24-image dev score",
+  "B1 text-only DeepSeek reader",
+  "R1 code/adapter vs sham",
+  "R2 iterative improvement"
+ ]
+}

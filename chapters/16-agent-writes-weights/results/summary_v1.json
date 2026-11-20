@@ -1,0 +1,76 @@
+{
+ "v1_lessons": {
+  "n_tasks": 8,
+  "tasks": [
+   "cifar10_0",
+   "eurosat_0",
+   "gtsrb_0",
+   "pets_0",
+   "cifar10_1",
+   "eurosat_1",
+   "gtsrb_1",
+   "pets_1"
+  ],
+  "scoring_calls_per_task": [
+   3,
+   3,
+   5,
+   5,
+   1,
+   4,
+   5,
+   5
+  ],
+  "agent_minus_start_points": 6.35,
+  "agent_beats_start_on": 6,
+  "agent_minus_placebo_points": 5.61,
+  "agent_vs_placebo_win_tie_loss": [
+   6,
+   1,
+   1
+  ],
+  "agent_minus_trained_fit_plus_feedback_points": -0.71,
+  "agent_vs_trained_fit_plus_feedback_win_tie_loss": [
+   3,
+   2,
+   3
+  ]
+ },
+ "v1_fresh": {
+  "n_tasks": 8,
+  "tasks": [
+   "cifar10_0",
+   "eurosat_0",
+   "gtsrb_0",
+   "pets_0",
+   "cifar10_1",
+   "eurosat_1",
+   "gtsrb_1",
+   "pets_1"
+  ],
+  "scoring_calls_per_task": [
+   4,
+   10,
+   6,
+   4,
+   7,
+   7,
+   6,
+   5
+  ],
+  "agent_minus_start_points": 1.27,
+  "agent_beats_start_on": 5,
+  "agent_minus_placebo_points": 0.53,
+  "agent_vs_placebo_win_tie_loss": [
+   5,
+   0,
+   3
+  ],
+  "agent_minus_trained_fit_plus_feedback_points": -5.79,
+  "agent_vs_trained_fit_plus_feedback_win_tie_loss": [
+   0,
+   0,
+   8
+  ]
+ }
+}
