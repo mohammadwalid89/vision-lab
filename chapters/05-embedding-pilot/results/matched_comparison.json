@@ -1,0 +1,173 @@
+{
+  "source": "pilot_results.json",
+  "cohort": "Phase 3 exposed development only",
+  "rule": "per-category threshold immediately below minimum calibration defect score; evaluation untouched by threshold selection",
+  "methods": {
+    "eg2_768": {
+      "by_category": {
+        "juice_bottle": {
+          "threshold": 0.00043105423507405755,
+          "good_releases": 1,
+          "good_n": 6,
+          "defect_escapes": 0,
+          "defect_n": 10,
+          "logical_escapes": 0,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.2588655508930522
+        },
+        "splicing_connectors": {
+          "threshold": 0.0023562573831850116,
+          "good_releases": 0,
+          "good_n": 6,
+          "defect_escapes": 1,
+          "defect_n": 10,
+          "logical_escapes": 1,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.39416330243650466
+        }
+      },
+      "good_releases": 1,
+      "good_n": 12,
+      "defect_escapes": 1,
+      "defect_n": 20,
+      "escape_cp95_upper": 0.2161061642068473,
+      "reviews_per_1000": 917.3333333333334,
+      "modeled_usd_per_1000": 279.33333333333337,
+      "auc": 0.48333333333333334
+    },
+    "eg2_256": {
+      "by_category": {
+        "juice_bottle": {
+          "threshold": 0.00047876645549504987,
+          "good_releases": 1,
+          "good_n": 6,
+          "defect_escapes": 0,
+          "defect_n": 10,
+          "logical_escapes": 0,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.2588655508930522
+        },
+        "splicing_connectors": {
+          "threshold": 0.001741598834735236,
+          "good_releases": 0,
+          "good_n": 6,
+          "defect_escapes": 1,
+          "defect_n": 10,
+          "logical_escapes": 1,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.39416330243650466
+        }
+      },
+      "good_releases": 1,
+      "good_n": 12,
+      "defect_escapes": 1,
+      "defect_n": 20,
+      "escape_cp95_upper": 0.2161061642068473,
+      "reviews_per_1000": 917.3333333333334,
+      "modeled_usd_per_1000": 279.33333333333337,
+      "auc": 0.48750000000000004
+    },
+    "resnet": {
+      "by_category": {
+        "juice_bottle": {
+          "threshold": 1.8148820400238035,
+          "good_releases": 0,
+          "good_n": 6,
+          "defect_escapes": 0,
+          "defect_n": 10,
+          "logical_escapes": 0,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.2588655508930522
+        },
+        "splicing_connectors": {
+          "threshold": 1.9820408821105955,
+          "good_releases": 0,
+          "good_n": 6,
+          "defect_escapes": 0,
+          "defect_n": 10,
+          "logical_escapes": 0,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.2588655508930522
+        }
+      },
+      "good_releases": 0,
+      "good_n": 12,
+      "defect_escapes": 0,
+      "defect_n": 20,
+      "escape_cp95_upper": 0.13910834066826516,
+      "reviews_per_1000": 1000.0,
+      "modeled_usd_per_1000": 250.0,
+      "auc": 0.8375
+    },
+    "wrn": {
+      "by_category": {
+        "juice_bottle": {
+          "threshold": 1.1526416540145872,
+          "good_releases": 3,
+          "good_n": 6,
+          "defect_escapes": 0,
+          "defect_n": 10,
+          "logical_escapes": 0,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.2588655508930522
+        },
+        "splicing_connectors": {
+          "threshold": 1.2859284877777097,
+          "good_releases": 1,
+          "good_n": 6,
+          "defect_escapes": 2,
+          "defect_n": 10,
+          "logical_escapes": 2,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.5069013010632024
+        }
+      },
+      "good_releases": 4,
+      "good_n": 12,
+      "defect_escapes": 2,
+      "defect_n": 20,
+      "escape_cp95_upper": 0.28261852488586087,
+      "reviews_per_1000": 671.3333333333333,
+      "modeled_usd_per_1000": 267.8333333333333,
+      "auc": 0.8458333333333333
+    },
+    "component_relational": {
+      "by_category": {
+        "juice_bottle": {
+          "threshold": 0.4986619985252268,
+          "good_releases": 1,
+          "good_n": 6,
+          "defect_escapes": 2,
+          "defect_n": 10,
+          "logical_escapes": 2,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.5069013010632024
+        },
+        "splicing_connectors": {
+          "threshold": 0.5214725321857508,
+          "good_releases": 0,
+          "good_n": 6,
+          "defect_escapes": 0,
+          "defect_n": 10,
+          "logical_escapes": 0,
+          "structural_escapes": 0,
+          "escape_cp95_upper": 0.2588655508930522
+        }
+      },
+      "good_releases": 1,
+      "good_n": 12,
+      "defect_escapes": 2,
+      "defect_n": 20,
+      "escape_cp95_upper": 0.28261852488586087,
+      "reviews_per_1000": 916.3333333333334,
+      "modeled_usd_per_1000": 329.08333333333337,
+      "auc": 0.5875
+    }
+  },
+  "all_human": {
+    "good_releases": 0,
+    "defect_escapes": 0,
+    "reviews_per_1000": 1000,
+    "modeled_usd_per_1000": 250
+  }
+}

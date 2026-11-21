@@ -12,7 +12,7 @@ transformers==5.20.2
 timm==1.0.30
 safetensors==0.8.0
 
-# Cascade-era chapters 01, 02, 07
+# Cascade-era chapters 01, 02, 07, and chapter 03's v001 application (code/system_one)
 anomalib==2.7.0
 openai-clip==1.0.1
 opencv-python==5.0.0.93
@@ -21,7 +21,10 @@ paddlepaddle==3.3.1
 ultralytics==8.4.184
 requests==2.34.2
 
+# Restored run code, chapters 03-05 (dataset mirror and model download)
+huggingface_hub==1.33.0
+
 # Tests
 pytest==9.1.1
 
-# Chapter 09 also needs Mirage 4.0.1 (Apache-2.0, imported as `cactus`), installed from its own release.
+# Chapter 09 also needs Mirage 4.0.1 (given as Apache-2.0; not verified, no official page identified; imported as `cactus`), installed from its own release.

@@ -1,0 +1,822 @@
+{
+ "frozen": {
+  "rule": "Amendment 2: per family, the variant with the lowest mean out-of-sample cost among those whose mean\n    out-of-sample escape rate is <= 1 %; its deployed point is the policy most often selected on half A, unless\n    that point releases a defect on the full selection set, in which case the full-set selection is used.",
+  "systems": {
+   "ad|phase2": {
+    "family": "ad",
+    "system": "wrn",
+    "policy": {
+     "ah": 0.02,
+     "ar": {
+      "bottle": 0.15,
+      "cable": 0.3,
+      "hazelnut": 0.3,
+      "pill": 0.95,
+      "tile": 0.05,
+      "transistor": 0.05
+     }
+    },
+    "policy_source": "most_selected_on_half_A",
+    "variant": "ad|wrn|calib=oof|comp=-|per_category",
+    "comp_key": "knn",
+    "kit_calib": "oof"
+   },
+   "ad|v001": {
+    "family": "ad",
+    "system": "v001",
+    "variant": "ad|v001 as deployed"
+   },
+   "ad|v001_tuned": {
+    "family": "ad",
+    "system": "v001_tuned",
+    "policy": {
+     "ah": 0.02,
+     "ar": 0.95
+    },
+    "variant": "ad|v001_tuned|calib=oof|comp=-|global",
+    "kit_calib": "oof",
+    "comp_key": "knn"
+   },
+   "loco|phase2": {
+    "family": "loco",
+    "system": "v001_tuned",
+    "policy": {
+     "ah": 0.0,
+     "ar": 0.3
+    },
+    "policy_source": "most_selected_on_half_A",
+    "variant": "loco|v001_tuned|calib=oof|comp=-|global",
+    "comp_key": "knn",
+    "kit_calib": "oof"
+   },
+   "loco|v001": {
+    "family": "loco",
+    "system": "v001",
+    "variant": "loco|v001 as deployed"
+   },
+   "loco|v001_tuned": {
+    "family": "loco",
+    "system": "v001_tuned",
+    "policy": {
+     "ah": 0.0,
+     "ar": 0.3
+    },
+    "variant": "loco|v001_tuned|calib=oof|comp=-|global",
+    "kit_calib": "oof",
+    "comp_key": "knn"
+   }
+  }
+ },
+ "systems": {
+  "ad|phase2": {
+   "overall": {
+    "n_good": 100,
+    "n_defect": 200,
+    "good_released": 84,
+    "good_release_rate": 0.84,
+    "good_release_ci95": [
+     0.7532124025891377,
+     0.9056897100260538
+    ],
+    "escapes": 0,
+    "escape_rate": 0.0,
+    "escape_ucb95": 0.014867039231272054,
+    "escapes_by_stratum": {},
+    "false_holds": 0,
+    "false_hold_rate": 0.0,
+    "good_to_person_rate": 0.16,
+    "defects_held_auto_rate": 0.695,
+    "defects_to_person_rate": 0.305,
+    "usd_per_1000": 40.724999999999994,
+    "person_reviews_per_1000": 162.89999999999998,
+    "good_released_per_1000_parts": 823.2
+   },
+   "per_category": {
+    "bottle": {
+     "n_good": 7,
+     "n_defect": 29,
+     "good_released": 7,
+     "good_release_rate": 1.0,
+     "good_release_ci95": [
+      0.5903836027749966,
+      1.0
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.0981446276772957,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.0,
+     "defects_held_auto_rate": 0.4482758620689655,
+     "defects_to_person_rate": 0.5517241379310345,
+     "usd_per_1000": 2.7586206896551726,
+     "person_reviews_per_1000": 11.03448275862069,
+     "good_released_per_1000_parts": 980.0
+    },
+    "cable": {
+     "n_good": 25,
+     "n_defect": 37,
+     "good_released": 22,
+     "good_release_rate": 0.88,
+     "good_release_ci95": [
+      0.6878096927137646,
+      0.9745346033522668
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.07777471100513791,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.12,
+     "defects_held_auto_rate": 0.8378378378378378,
+     "defects_to_person_rate": 0.16216216216216217,
+     "usd_per_1000": 30.21081081081081,
+     "person_reviews_per_1000": 120.84324324324324,
+     "good_released_per_1000_parts": 862.4
+    },
+    "hazelnut": {
+     "n_good": 15,
+     "n_defect": 26,
+     "good_released": 13,
+     "good_release_rate": 0.8666666666666667,
+     "good_release_ci95": [
+      0.5953973033966279,
+      0.9834240865599164
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.1088303557607848,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.13333333333333333,
+     "defects_held_auto_rate": 1.0,
+     "defects_to_person_rate": 0.0,
+     "usd_per_1000": 32.666666666666664,
+     "person_reviews_per_1000": 130.66666666666666,
+     "good_released_per_1000_parts": 849.3333333333334
+    },
+    "pill": {
+     "n_good": 11,
+     "n_defect": 66,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.28491415291815436
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.04437517261818429,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.5454545454545454,
+     "defects_to_person_rate": 0.45454545454545453,
+     "usd_per_1000": 247.27272727272725,
+     "person_reviews_per_1000": 989.090909090909,
+     "good_released_per_1000_parts": 0.0
+    },
+    "tile": {
+     "n_good": 15,
+     "n_defect": 35,
+     "good_released": 15,
+     "good_release_rate": 1.0,
+     "good_release_ci95": [
+      0.7819806390894659,
+      1.0
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.08203163585667045,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.0,
+     "defects_held_auto_rate": 0.7714285714285715,
+     "defects_to_person_rate": 0.22857142857142856,
+     "usd_per_1000": 1.142857142857143,
+     "person_reviews_per_1000": 4.571428571428572,
+     "good_released_per_1000_parts": 980.0
+    },
+    "transistor": {
+     "n_good": 27,
+     "n_defect": 7,
+     "good_released": 27,
+     "good_release_rate": 1.0,
+     "good_release_ci95": [
+      0.8722971323845676,
+      1.0
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.34816365513116077,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.0,
+     "defects_held_auto_rate": 0.8571428571428571,
+     "defects_to_person_rate": 0.14285714285714285,
+     "usd_per_1000": 0.7142857142857143,
+     "person_reviews_per_1000": 2.857142857142857,
+     "good_released_per_1000_parts": 980.0
+    }
+   }
+  },
+  "ad|v001": {
+   "overall": {
+    "n_good": 100,
+    "n_defect": 200,
+    "good_released": 4,
+    "good_release_rate": 0.04,
+    "good_release_ci95": [
+     0.011004493986188198,
+     0.09925715671265992
+    ],
+    "escapes": 0,
+    "escape_rate": 0.0,
+    "escape_ucb95": 0.014867039231272054,
+    "escapes_by_stratum": {},
+    "false_holds": 0,
+    "false_hold_rate": 0.0,
+    "good_to_person_rate": 0.96,
+    "defects_held_auto_rate": 0.2,
+    "defects_to_person_rate": 0.8,
+    "usd_per_1000": 239.2,
+    "person_reviews_per_1000": 956.8,
+    "good_released_per_1000_parts": 39.2
+   },
+   "per_category": {
+    "bottle": {
+     "n_good": 7,
+     "n_defect": 29,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.40961639722500337
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.0981446276772957,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    },
+    "cable": {
+     "n_good": 25,
+     "n_defect": 37,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.1371851715307125
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.07777471100513791,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    },
+    "hazelnut": {
+     "n_good": 15,
+     "n_defect": 26,
+     "good_released": 2,
+     "good_release_rate": 0.13333333333333333,
+     "good_release_ci95": [
+      0.016575913440083623,
+      0.40460269660337206
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.1088303557607848,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.8666666666666667,
+     "defects_held_auto_rate": 0.6538461538461539,
+     "defects_to_person_rate": 0.34615384615384615,
+     "usd_per_1000": 214.06410256410257,
+     "person_reviews_per_1000": 856.2564102564103,
+     "good_released_per_1000_parts": 130.66666666666666
+    },
+    "pill": {
+     "n_good": 11,
+     "n_defect": 66,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.28491415291815436
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.04437517261818429,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.3484848484848485,
+     "defects_to_person_rate": 0.6515151515151515,
+     "usd_per_1000": 248.25757575757575,
+     "person_reviews_per_1000": 993.030303030303,
+     "good_released_per_1000_parts": 0.0
+    },
+    "tile": {
+     "n_good": 15,
+     "n_defect": 35,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.218019360910534
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.08203163585667045,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    },
+    "transistor": {
+     "n_good": 27,
+     "n_defect": 7,
+     "good_released": 2,
+     "good_release_rate": 0.07407407407407407,
+     "good_release_ci95": [
+      0.009100072942306284,
+      0.24289834684562717
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.34816365513116077,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.9259259259259259,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 231.85185185185188,
+     "person_reviews_per_1000": 927.4074074074075,
+     "good_released_per_1000_parts": 72.5925925925926
+    }
+   }
+  },
+  "ad|v001_tuned": {
+   "overall": {
+    "n_good": 100,
+    "n_defect": 200,
+    "good_released": 4,
+    "good_release_rate": 0.04,
+    "good_release_ci95": [
+     0.011004493986188198,
+     0.09925715671265992
+    ],
+    "escapes": 0,
+    "escape_rate": 0.0,
+    "escape_ucb95": 0.014867039231272054,
+    "escapes_by_stratum": {},
+    "false_holds": 1,
+    "false_hold_rate": 0.01,
+    "good_to_person_rate": 0.95,
+    "defects_held_auto_rate": 0.555,
+    "defects_to_person_rate": 0.445,
+    "usd_per_1000": 254.575,
+    "person_reviews_per_1000": 939.9,
+    "good_released_per_1000_parts": 39.2
+   },
+   "per_category": {
+    "bottle": {
+     "n_good": 7,
+     "n_defect": 29,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.40961639722500337
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.0981446276772957,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.41379310344827586,
+     "defects_to_person_rate": 0.5862068965517241,
+     "usd_per_1000": 247.9310344827586,
+     "person_reviews_per_1000": 991.7241379310344,
+     "good_released_per_1000_parts": 0.0
+    },
+    "cable": {
+     "n_good": 25,
+     "n_defect": 37,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.1371851715307125
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.07777471100513791,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.5945945945945946,
+     "defects_to_person_rate": 0.40540540540540543,
+     "usd_per_1000": 247.02702702702703,
+     "person_reviews_per_1000": 988.1081081081081,
+     "good_released_per_1000_parts": 0.0
+    },
+    "hazelnut": {
+     "n_good": 15,
+     "n_defect": 26,
+     "good_released": 2,
+     "good_release_rate": 0.13333333333333333,
+     "good_release_ci95": [
+      0.016575913440083623,
+      0.40460269660337206
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.1088303557607848,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.8666666666666667,
+     "defects_held_auto_rate": 0.8461538461538461,
+     "defects_to_person_rate": 0.15384615384615385,
+     "usd_per_1000": 213.10256410256412,
+     "person_reviews_per_1000": 852.4102564102565,
+     "good_released_per_1000_parts": 130.66666666666666
+    },
+    "pill": {
+     "n_good": 11,
+     "n_defect": 66,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.28491415291815436
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.04437517261818429,
+     "escapes_by_stratum": {},
+     "false_holds": 1,
+     "false_hold_rate": 0.09090909090909091,
+     "good_to_person_rate": 0.9090909090909091,
+     "defects_held_auto_rate": 0.42424242424242425,
+     "defects_to_person_rate": 0.5757575757575758,
+     "usd_per_1000": 403.78787878787875,
+     "person_reviews_per_1000": 902.4242424242424,
+     "good_released_per_1000_parts": 0.0
+    },
+    "tile": {
+     "n_good": 15,
+     "n_defect": 35,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.218019360910534
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.08203163585667045,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.6571428571428571,
+     "defects_to_person_rate": 0.34285714285714286,
+     "usd_per_1000": 246.71428571428572,
+     "person_reviews_per_1000": 986.8571428571429,
+     "good_released_per_1000_parts": 0.0
+    },
+    "transistor": {
+     "n_good": 27,
+     "n_defect": 7,
+     "good_released": 2,
+     "good_release_rate": 0.07407407407407407,
+     "good_release_ci95": [
+      0.009100072942306284,
+      0.24289834684562717
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.34816365513116077,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 0.9259259259259259,
+     "defects_held_auto_rate": 0.5714285714285714,
+     "defects_to_person_rate": 0.42857142857142855,
+     "usd_per_1000": 228.99470899470901,
+     "person_reviews_per_1000": 915.9788359788361,
+     "good_released_per_1000_parts": 72.5925925925926
+    }
+   }
+  },
+  "loco|phase2": {
+   "overall": {
+    "n_good": 100,
+    "n_defect": 200,
+    "good_released": 0,
+    "good_release_rate": 0.0,
+    "good_release_ci95": [
+     0.0,
+     0.03621669264517641
+    ],
+    "escapes": 0,
+    "escape_rate": 0.0,
+    "escape_ucb95": 0.014867039231272054,
+    "escapes_by_stratum": {},
+    "false_holds": 0,
+    "false_hold_rate": 0.0,
+    "good_to_person_rate": 1.0,
+    "defects_held_auto_rate": 0.0,
+    "defects_to_person_rate": 1.0,
+    "usd_per_1000": 250.0,
+    "person_reviews_per_1000": 1000.0,
+    "good_released_per_1000_parts": 0.0
+   },
+   "per_category": {
+    "breakfast_box": {
+     "n_good": 23,
+     "n_defect": 56,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.14818512891522437
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.05208952720877942,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    },
+    "pushpins": {
+     "n_good": 47,
+     "n_defect": 56,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.07548573369105858
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.05208952720877942,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    },
+    "screw_bag": {
+     "n_good": 30,
+     "n_defect": 88,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.11570330822202778
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.03346948891663743,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    }
+   }
+  },
+  "loco|v001": {
+   "overall": {
+    "n_good": 100,
+    "n_defect": 200,
+    "good_released": 0,
+    "good_release_rate": 0.0,
+    "good_release_ci95": [
+     0.0,
+     0.03621669264517641
+    ],
+    "escapes": 0,
+    "escape_rate": 0.0,
+    "escape_ucb95": 0.014867039231272054,
+    "escapes_by_stratum": {},
+    "false_holds": 1,
+    "false_hold_rate": 0.01,
+    "good_to_person_rate": 0.99,
+    "defects_held_auto_rate": 0.05,
+    "defects_to_person_rate": 0.95,
+    "usd_per_1000": 266.9,
+    "person_reviews_per_1000": 989.1999999999999,
+    "good_released_per_1000_parts": 0.0
+   },
+   "per_category": {
+    "breakfast_box": {
+     "n_good": 23,
+     "n_defect": 56,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.14818512891522437
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.05208952720877942,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.08928571428571429,
+     "defects_to_person_rate": 0.9107142857142857,
+     "usd_per_1000": 249.55357142857142,
+     "person_reviews_per_1000": 998.2142857142857,
+     "good_released_per_1000_parts": 0.0
+    },
+    "pushpins": {
+     "n_good": 47,
+     "n_defect": 56,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.07548573369105858
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.05208952720877942,
+     "escapes_by_stratum": {},
+     "false_holds": 1,
+     "false_hold_rate": 0.02127659574468085,
+     "good_to_person_rate": 0.9787234042553191,
+     "defects_held_auto_rate": 0.07142857142857142,
+     "defects_to_person_rate": 0.9285714285714286,
+     "usd_per_1000": 286.1322188449847,
+     "person_reviews_per_1000": 977.7203647416412,
+     "good_released_per_1000_parts": 0.0
+    },
+    "screw_bag": {
+     "n_good": 30,
+     "n_defect": 88,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.11570330822202778
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.03346948891663743,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.011363636363636364,
+     "defects_to_person_rate": 0.9886363636363636,
+     "usd_per_1000": 249.9431818181818,
+     "person_reviews_per_1000": 999.7727272727273,
+     "good_released_per_1000_parts": 0.0
+    }
+   }
+  },
+  "loco|v001_tuned": {
+   "overall": {
+    "n_good": 100,
+    "n_defect": 200,
+    "good_released": 0,
+    "good_release_rate": 0.0,
+    "good_release_ci95": [
+     0.0,
+     0.03621669264517641
+    ],
+    "escapes": 0,
+    "escape_rate": 0.0,
+    "escape_ucb95": 0.014867039231272054,
+    "escapes_by_stratum": {},
+    "false_holds": 0,
+    "false_hold_rate": 0.0,
+    "good_to_person_rate": 1.0,
+    "defects_held_auto_rate": 0.0,
+    "defects_to_person_rate": 1.0,
+    "usd_per_1000": 250.0,
+    "person_reviews_per_1000": 1000.0,
+    "good_released_per_1000_parts": 0.0
+   },
+   "per_category": {
+    "breakfast_box": {
+     "n_good": 23,
+     "n_defect": 56,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.14818512891522437
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.05208952720877942,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    },
+    "pushpins": {
+     "n_good": 47,
+     "n_defect": 56,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.07548573369105858
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.05208952720877942,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    },
+    "screw_bag": {
+     "n_good": 30,
+     "n_defect": 88,
+     "good_released": 0,
+     "good_release_rate": 0.0,
+     "good_release_ci95": [
+      0.0,
+      0.11570330822202778
+     ],
+     "escapes": 0,
+     "escape_rate": 0.0,
+     "escape_ucb95": 0.03346948891663743,
+     "escapes_by_stratum": {},
+     "false_holds": 0,
+     "false_hold_rate": 0.0,
+     "good_to_person_rate": 1.0,
+     "defects_held_auto_rate": 0.0,
+     "defects_to_person_rate": 1.0,
+     "usd_per_1000": 250.0,
+     "person_reviews_per_1000": 1000.0,
+     "good_released_per_1000_parts": 0.0
+    }
+   }
+  }
+ }
+}

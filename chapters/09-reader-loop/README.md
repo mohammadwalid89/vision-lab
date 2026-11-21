@@ -2,7 +2,7 @@
 
 **Question.** Can a reader model plus an adapter, revised once from measured errors, beat a sham adapter?
 
-**Setup.** Mirage 4.0.1 (Apache-2.0), a 22 MB 2-bit local perception model that returns a structured record per image (object names, boxes in 0-1000 coordinates, scores, relations, text). Planned arms on the same frozen images: the Mirage record alone, a text-only language-model reader over that record, a learned adapter over the record trained on 12 images and applied to 24, a sham adapter trained on permuted labels, and one revision of the adapter chosen from measured errors. Only the preflight below was run.
+**Setup.** Mirage 4.0.1 (given as Apache-2.0 in the experiment's documents; not verified, no official page identified), a 22 MB 2-bit local perception model that returns a structured record per image (object names, boxes in 0-1000 coordinates, scores, relations, text). Planned arms on the same frozen images: the Mirage record alone, a text-only language-model reader over that record, a learned adapter over the record trained on 12 images and applied to 24, a sham adapter trained on permuted labels, and one revision of the adapter chosen from measured errors. Only the preflight below was run.
 The preflight used three VisDrone training images and the six detector classes (person, bicycle, car, truck, bus, motorcycle), with a frozen table that maps Mirage's object names to those classes.
 
 **Result.** No arm ran, so there is no comparison. Preflight, as box detection at IoU 0.5 and score 0.25 (`results/summary.json`, from `score_preflight.py`; the same totals are in the run's status record):

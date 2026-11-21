@@ -21,6 +21,7 @@ outputs/
 *.safetensors
 *.onnx
 *.pkl
+*.joblib
 *.png
 *.jpg
 *.jpeg
@@ -32,3 +33,18 @@ outputs/
 # local configuration
 .env
 .env.*
+.claude/
+
+# run folders written by the restored run code in chapters 03-05
+chapters/*/code/out/
+chapters/*/code/models/
+chapters/*/code/model/
+chapters/*/code/raw/
+# the v001 application's reference file (chapter 03), a run output
+chapters/*/code/state/
+# files the restored scripts write next to themselves; the published copies live in results/
+chapters/*/code/pilot_plan.json
+chapters/*/code/pilot_results.json
+chapters/*/code/matched_comparison.json
+chapters/*/code/FINAL_PHASE2_EVALUATION.md
+chapters/*/code/FINAL_PHASE3_EVALUATION.md

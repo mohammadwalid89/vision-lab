@@ -1,0 +1,949 @@
+{
+  "plan_sha256": "198e9b64bef0ccbd6973675175c76c58266afe6049b4665e1cb6c0f69c3c9e0d",
+  "model_sha256": "b9140d3f4aa6ee25fd9f38af804c1bf8896dbf7a3e0a4aafb20c93f4bbc4c2d3",
+  "runtime": {
+    "python": "3.12.3",
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.2",
+    "cpu_threads": 2,
+    "vision_soft_tokens": 70,
+    "model_load_excluded_from_latency": true
+  },
+  "rows": [
+    {
+      "sha256": "8948323c69485dc5a8386aeea0261d5e3512a00f954336bbeddc5c040219b6be",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2362.5080450437963,
+      "resnet": 1.8810747861862183,
+      "wrn": 1.1605112552642822,
+      "component_relational": 0.4165398784589175,
+      "eg2_768": 0.05553324680195182,
+      "eg2_256": 0.07319351862123558
+    },
+    {
+      "sha256": "9db51fffaa77dbc3027f24b08e5f325a048b071507df39581dcfa50b7ec73e18",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 4654.564269003458,
+      "resnet": 1.9648417234420776,
+      "wrn": 1.1518992185592651,
+      "component_relational": 0.5419516407745599,
+      "eg2_768": 0.003435754044601169,
+      "eg2_256": 0.0038712875916486755
+    },
+    {
+      "sha256": "2fa3ec5d49fbf5e983a90deedf55812427689f8b4f1cb82250f817aa54ec8811",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2244.918184936978,
+      "resnet": 2.0778450965881348,
+      "wrn": 1.1701345443725586,
+      "component_relational": 0.45375993575101264,
+      "eg2_768": 0.03794038353477103,
+      "eg2_256": 0.05073598283978609
+    },
+    {
+      "sha256": "490ace78d3cd021e16f864f77cc3bae21c1bc1389f6d5804162adfe482d4125c",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2273.2589569641277,
+      "resnet": 1.8886829614639282,
+      "wrn": 1.1556031703948975,
+      "component_relational": 0.6422083647056074,
+      "eg2_768": 0.04732057763654929,
+      "eg2_256": 0.03285434894381445
+    },
+    {
+      "sha256": "424c4dfca48d2a037fc797709f49b204dfe6306d68ac2be2ba2e9ac634fc2f21",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2281.510696047917,
+      "resnet": 1.960524082183838,
+      "wrn": 1.158459186553955,
+      "component_relational": 0.6327359530205559,
+      "eg2_768": 0.004980407800362241,
+      "eg2_256": 0.004731423551276648
+    },
+    {
+      "sha256": "aa5c800d30f7381552f8bca2d817511945db7d44e9b96c8b4b95d406b7d363dd",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2384.4382519600913,
+      "resnet": 1.9503681659698486,
+      "wrn": 1.1464028358459473,
+      "component_relational": 0.7964746991954187,
+      "eg2_768": 0.0020777548834081117,
+      "eg2_256": 0.002113758759103468
+    },
+    {
+      "sha256": "b934bb249a453dd83b179366de1918595a27e42279ee79226262b924adbd377e",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2496.7864430509508,
+      "resnet": 1.983674168586731,
+      "wrn": 1.158412218093872,
+      "component_relational": 0.521288746609519,
+      "eg2_768": 0.0037633404423462746,
+      "eg2_256": 0.003471860278663641
+    },
+    {
+      "sha256": "238be896bcaa51ce36aaaa111a4309bd4a0de43f4e7fe8e3e2906ea009929d1d",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2309.4110019737855,
+      "resnet": 1.930143117904663,
+      "wrn": 1.2041360139846802,
+      "component_relational": 0.40280918989241804,
+      "eg2_768": 0.10011961047257834,
+      "eg2_256": 0.12349364402050234
+    },
+    {
+      "sha256": "de885cb8a390cb8b4f864595b6fb15f884ff1801cbe419307d3421db97b6ab9f",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2635.6350930873305,
+      "resnet": 2.1406338214874268,
+      "wrn": 1.1737339496612549,
+      "component_relational": 0.5487906274085468,
+      "eg2_768": 0.004881415531993172,
+      "eg2_256": 0.0036200628698312975
+    },
+    {
+      "sha256": "616b8fb038746cbe21772f49a0f664c43ddf540612279002ba140848ea384afb",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2494.727651006542,
+      "resnet": 2.0786335468292236,
+      "wrn": 1.1651949882507324,
+      "component_relational": 0.6270361964765914,
+      "eg2_768": 0.00021695197467264116,
+      "eg2_256": 0.00021803667181630182
+    },
+    {
+      "sha256": "7bc4e4939f3f156ee528dfc2a7a5cf80fe6488425ad1ecb133d25b97a016a9f6",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2145.579130970873,
+      "resnet": 1.981150507926941,
+      "wrn": 1.1534091234207153,
+      "component_relational": 0.4847723640440538,
+      "eg2_768": 0.06964865796349973,
+      "eg2_256": 0.08067759261053675
+    },
+    {
+      "sha256": "931dff3d2c766aac679fa9320672546743435966951e0e9d0240411cf0f1bbd1",
+      "category": "juice_bottle",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2195.190386963077,
+      "resnet": 1.955320119857788,
+      "wrn": 1.148201584815979,
+      "component_relational": 0.7368605312686849,
+      "eg2_768": 0.028262339083824695,
+      "eg2_256": 0.03300544771644032
+    },
+    {
+      "sha256": "826b2ac1b7daeb74f9bfc3de3bdeedada77e4bff1c95fe67af7ce122c576c5bc",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2237.4842839781195,
+      "resnet": 2.8367903232574463,
+      "wrn": 1.8245742321014404,
+      "component_relational": 1.5425858991204227,
+      "eg2_768": 0.02524013445273665,
+      "eg2_256": 0.019293036656249263
+    },
+    {
+      "sha256": "26013fbc19252c7515a14b9a79dba85476615f610b406100fb1bd945940a8f0f",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2188.623861060478,
+      "resnet": 1.9191696643829346,
+      "wrn": 1.1794328689575195,
+      "component_relational": 0.4764985683346685,
+      "eg2_768": 0.0027459203953263955,
+      "eg2_256": 0.0022353559579308957
+    },
+    {
+      "sha256": "60149cb13b461eaab133937ce92e340f08d81faa49e85f9330ba6c718e0963f4",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2169.9098389362916,
+      "resnet": 1.9507261514663696,
+      "wrn": 1.2694854736328125,
+      "component_relational": 0.5990077134699476,
+      "eg2_768": 0.016651966480830116,
+      "eg2_256": 0.017904903084555057
+    },
+    {
+      "sha256": "d94376918113449a2c12992393a14f7d7537d5e0925a745982f7275de90d3bee",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2205.2091589430347,
+      "resnet": 2.663270950317383,
+      "wrn": 1.8032104969024658,
+      "component_relational": 0.8724326081766833,
+      "eg2_768": 0.0012637499134406927,
+      "eg2_256": 0.0012249418050976901
+    },
+    {
+      "sha256": "8ea920159be5da330bd03baf22b6268e45df2e4117380dda26750d066ca2f145",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2457.864211057313,
+      "resnet": 2.6182892322540283,
+      "wrn": 1.4627348184585571,
+      "component_relational": 0.7574044966636799,
+      "eg2_768": 0.014330437664177964,
+      "eg2_256": 0.01497903469255224
+    },
+    {
+      "sha256": "cbb0a57715bd868baaf1368d494f1da956f96d67a4406515e60756d8de89d21a",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2004.2879179818556,
+      "resnet": 3.095346212387085,
+      "wrn": 1.9501036405563354,
+      "component_relational": 0.8148671201111902,
+      "eg2_768": 0.0406678011347541,
+      "eg2_256": 0.05026507354652021
+    },
+    {
+      "sha256": "157c08fb09c46a4a47dfb08829614c7ad56d4a8fbb7fffab261ce4f6134e495f",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2118.0052499985322,
+      "resnet": 3.0724387168884277,
+      "wrn": 1.960836410522461,
+      "component_relational": 0.5812712966263394,
+      "eg2_768": 0.08537266115488995,
+      "eg2_256": 0.0698929159509365
+    },
+    {
+      "sha256": "a868fa3e1f5fdc2dd86c4486c10aa61792a708691d42b0b3180d28842a637fff",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 1979.125119978562,
+      "resnet": 3.071570873260498,
+      "wrn": 1.7792320251464844,
+      "component_relational": 1.2429372382272112,
+      "eg2_768": 0.16907328918699105,
+      "eg2_256": 0.1872013212189797
+    },
+    {
+      "sha256": "45960e654756e5d48fdab4dc3d4dcb5a7dd967ec39ae96a72cba3844feb2876e",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2251.9098300253972,
+      "resnet": 2.6266531944274902,
+      "wrn": 1.7404634952545166,
+      "component_relational": 0.835551481367849,
+      "eg2_768": 0.00449522050667972,
+      "eg2_256": 0.004872221970235957
+    },
+    {
+      "sha256": "1654817c0ad051c8593fef260fda041b346fac5e279d41924ce9307bebdb4e25",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2191.755398060195,
+      "resnet": 2.0017387866973877,
+      "wrn": 1.1736762523651123,
+      "component_relational": 0.49407038510513124,
+      "eg2_768": 0.005069342466111015,
+      "eg2_256": 0.004719732688686529
+    },
+    {
+      "sha256": "d55ee92f69ca9083b1413f3b355f0fe3f0423afa316d79a00dcfd61197f9bda1",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2267.672881949693,
+      "resnet": 1.967443585395813,
+      "wrn": 1.2619515657424927,
+      "component_relational": 0.5812090958397536,
+      "eg2_768": 0.005235090770822737,
+      "eg2_256": 0.004990925613008734
+    },
+    {
+      "sha256": "433446b45eb8b195c360b6fa860389fd659db1e311b256823dded8bbb111bf62",
+      "category": "juice_bottle",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2298.081181012094,
+      "resnet": 3.0635921955108643,
+      "wrn": 1.9581794738769531,
+      "component_relational": 0.9477995378598241,
+      "eg2_768": 0.0028067564377992626,
+      "eg2_256": 0.0031461407843556
+    },
+    {
+      "sha256": "2022f2e0ad8b3c4909ed2bd8d63c81fd0072f63bc202b3817d7d94f8e768d93f",
+      "category": "juice_bottle",
+      "stratum": "structural_anomalies",
+      "split": "calibration",
+      "latency_ms": 2131.2618700321764,
+      "resnet": 3.2649316787719727,
+      "wrn": 1.797752022743225,
+      "component_relational": 0.8894397964690336,
+      "eg2_768": 0.5679416565493003,
+      "eg2_256": 0.5833534283781135
+    },
+    {
+      "sha256": "60742f32fd809f4078f406fe2d21e3073a4693d0a0d51abf15d59eef677196f1",
+      "category": "juice_bottle",
+      "stratum": "structural_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2153.791139018722,
+      "resnet": 2.44002628326416,
+      "wrn": 1.5047215223312378,
+      "component_relational": 0.5362321588703041,
+      "eg2_768": 0.09031611585632682,
+      "eg2_256": 0.11087522298574903
+    },
+    {
+      "sha256": "cdd33a62ccb5c454683ceb372e56a9c032c2f884d009f053bf0668740c1eb3a6",
+      "category": "juice_bottle",
+      "stratum": "structural_anomalies",
+      "split": "calibration",
+      "latency_ms": 4176.83373298496,
+      "resnet": 2.490412950515747,
+      "wrn": 1.550490379333496,
+      "component_relational": 0.5708436873121767,
+      "eg2_768": 0.0004310542350740576,
+      "eg2_256": 0.0004787664554950499
+    },
+    {
+      "sha256": "4e533272ec5d0ae60ded75397d30bc8648a971d36d03810ba8a773f9cab6343a",
+      "category": "juice_bottle",
+      "stratum": "structural_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2517.134906956926,
+      "resnet": 3.331082582473755,
+      "wrn": 1.7420381307601929,
+      "component_relational": 1.1712742256191295,
+      "eg2_768": 0.03006813257060681,
+      "eg2_256": 0.037854621658064636
+    },
+    {
+      "sha256": "14d6048b9bb10c8f2192dde36946c6aa2d5fdc2266a9a75c16cbd11f36e98159",
+      "category": "juice_bottle",
+      "stratum": "structural_anomalies",
+      "split": "calibration",
+      "latency_ms": 2247.3896720912308,
+      "resnet": 2.0272741317749023,
+      "wrn": 1.1526416540145874,
+      "component_relational": 0.5239840582333641,
+      "eg2_768": 0.1009416221376358,
+      "eg2_256": 0.10961092464474365
+    },
+    {
+      "sha256": "3767b437e7792f34b4ad9de78f363789004a7cb300ca0fbb5c98ecf695af5eaa",
+      "category": "juice_bottle",
+      "stratum": "structural_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2098.7568049458787,
+      "resnet": 2.4680917263031006,
+      "wrn": 1.4206900596618652,
+      "component_relational": 0.865638963165153,
+      "eg2_768": 0.005500490833483029,
+      "eg2_256": 0.005667168487137997
+    },
+    {
+      "sha256": "04cf302cdf5054e6d6fc762506b2115d055faef59d283b10220d221bc4a4bf8c",
+      "category": "juice_bottle",
+      "stratum": "structural_anomalies",
+      "split": "calibration",
+      "latency_ms": 2040.9497240325436,
+      "resnet": 1.8148820400238037,
+      "wrn": 1.1574362516403198,
+      "component_relational": 0.49866199852522686,
+      "eg2_768": 0.010603020611592351,
+      "eg2_256": 0.011889259142261244
+    },
+    {
+      "sha256": "8d9faa92a7cd3536accbf69f4acbd272020b4902bc002c6cad81f5a858a19c00",
+      "category": "juice_bottle",
+      "stratum": "structural_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2060.8551350887865,
+      "resnet": 2.159306764602661,
+      "wrn": 1.2773176431655884,
+      "component_relational": 0.7192050444550615,
+      "eg2_768": 0.008950407494179191,
+      "eg2_256": 0.010102171207147292
+    },
+    {
+      "sha256": "81588e5e8c79be5f2f3a0f5dbe3c088a40a44ea6fb2c331f5f7adab789365cdb",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2157.2283619316295,
+      "resnet": 2.1011412143707275,
+      "wrn": 1.4139269590377808,
+      "component_relational": 1.105077279965671,
+      "eg2_768": 0.007315653618324314,
+      "eg2_256": 0.005498773324166484
+    },
+    {
+      "sha256": "b4af657d9482f27af37b315e7810b94087c8d4261b3d20aa85ad2811595d7f9e",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2217.131052981131,
+      "resnet": 1.994084119796753,
+      "wrn": 1.3701565265655518,
+      "component_relational": 0.677654498361379,
+      "eg2_768": 0.00884832009462988,
+      "eg2_256": 0.0070318530531239265
+    },
+    {
+      "sha256": "c6801abdc2ab512594eb13cbe21991a3bb438fccf60f3fe90440f486d6b7868d",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2254.935499979183,
+      "resnet": 1.9895777702331543,
+      "wrn": 1.3176857233047485,
+      "component_relational": 0.6651263784210191,
+      "eg2_768": 0.006223097569367009,
+      "eg2_256": 0.004302819054003648
+    },
+    {
+      "sha256": "c2827fbbeb5489506d6079ecb9ac0a60b14facfcc1057c50d8f389b019df2263",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2126.5923540340737,
+      "resnet": 2.164374589920044,
+      "wrn": 1.3345065116882324,
+      "component_relational": 0.8068917102853064,
+      "eg2_768": 0.007183702859319907,
+      "eg2_256": 0.0056810179849982045
+    },
+    {
+      "sha256": "ac31cb9b7c21045dac18c33503594de80bf3942c29512e1ccd89b8dfab386589",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2070.9208300104365,
+      "resnet": 2.1120452880859375,
+      "wrn": 1.338746428489685,
+      "component_relational": 0.7427127340887583,
+      "eg2_768": 0.013367703783059182,
+      "eg2_256": 0.009580506250308818
+    },
+    {
+      "sha256": "dbb8cca5f164e6e9ca6ece49f70e6006f98db9273bf26e1a3c45a270e3d8b441",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2037.3455239459872,
+      "resnet": 2.1177892684936523,
+      "wrn": 1.4406431913375854,
+      "component_relational": 1.1283847809947496,
+      "eg2_768": 0.3576190380426021,
+      "eg2_256": 0.4451806761146635
+    },
+    {
+      "sha256": "c95cc8d36168c431c7667a3bb98431f8aeca73ffa78fbae18be953a330307ca0",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2598.319470998831,
+      "resnet": 2.144216299057007,
+      "wrn": 1.2899419069290161,
+      "component_relational": 0.6482966515064122,
+      "eg2_768": 0.006019583603260825,
+      "eg2_256": 0.004473499847129525
+    },
+    {
+      "sha256": "06063d80c42b9be9cd0ec24160c15316e591e5b87a2458e986401d80a94f9f52",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2512.5841799890622,
+      "resnet": 2.034487009048462,
+      "wrn": 1.2789382934570312,
+      "component_relational": 0.7294476581666991,
+      "eg2_768": 0.004576151393545391,
+      "eg2_256": 0.004034876786441655
+    },
+    {
+      "sha256": "4cbc111b06f20301523b61139b6797f6ee468e4245cda455cfb0982aacee80bc",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2174.9177239835262,
+      "resnet": 2.005725383758545,
+      "wrn": 1.3232231140136719,
+      "component_relational": 0.6904123671485001,
+      "eg2_768": 0.04715774221998614,
+      "eg2_256": 0.05102701088074679
+    },
+    {
+      "sha256": "0c83c27007cde9d2a44aa030e0e9a2c48fb0408b7a266b0191c01c5e38159c5e",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2089.594674995169,
+      "resnet": 2.1179261207580566,
+      "wrn": 1.3151799440383911,
+      "component_relational": 0.9623766630693951,
+      "eg2_768": 0.00587940156440403,
+      "eg2_256": 0.00586357021038264
+    },
+    {
+      "sha256": "bf267426b1097d4f461ce855d0d56afdbb5fa5cf3416b96cdab280bf197d5191",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "calibration",
+      "latency_ms": 2091.7743020690978,
+      "resnet": 2.147230625152588,
+      "wrn": 1.3195712566375732,
+      "component_relational": 1.1482837156149224,
+      "eg2_768": 0.02323082271267951,
+      "eg2_256": 0.023147251726926
+    },
+    {
+      "sha256": "b4204d5f13e459586008ca228c064d1d9031e0ce817255895bfe8cae07870bd2",
+      "category": "splicing_connectors",
+      "stratum": "good",
+      "split": "evaluation",
+      "latency_ms": 2156.783887068741,
+      "resnet": 2.1272687911987305,
+      "wrn": 1.4735709428787231,
+      "component_relational": 1.0532821961415801,
+      "eg2_768": 0.027425386441444433,
+      "eg2_256": 0.021828669240607
+    },
+    {
+      "sha256": "df92314fda676edf0504edea4257922f40a37c5e113bc0f1dc09fd0c5daa661d",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2093.2947059627622,
+      "resnet": 2.721656322479248,
+      "wrn": 1.8133543729782104,
+      "component_relational": 0.9104439477537192,
+      "eg2_768": 0.022435612924741832,
+      "eg2_256": 0.019549304163249515
+    },
+    {
+      "sha256": "c875d8f5303593e58b0dbfee5220d17145faeff7eb4e668ff4f4c5959f880e52",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2068.4254289371893,
+      "resnet": 1.993666172027588,
+      "wrn": 1.4129310846328735,
+      "component_relational": 1.037102215097665,
+      "eg2_768": 0.020734447938722367,
+      "eg2_256": 0.01726426792388569
+    },
+    {
+      "sha256": "ae3fece8610ff1f9911c981481eb8bca39094d9979a6f1f4b0c4d46127ce2ece",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2046.894776984118,
+      "resnet": 2.0840556621551514,
+      "wrn": 1.4082938432693481,
+      "component_relational": 0.6336937702782126,
+      "eg2_768": 0.004371519963934034,
+      "eg2_256": 0.0036812635224582335
+    },
+    {
+      "sha256": "21e56a70f0ad2c98911a61b34851a9882dac3b5a5a6b248f6fc3c717ca1c2a2e",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2066.512228921056,
+      "resnet": 2.6764612197875977,
+      "wrn": 1.8544832468032837,
+      "component_relational": 0.7942268409438688,
+      "eg2_768": 0.0037265161428087223,
+      "eg2_256": 0.002962124747410755
+    },
+    {
+      "sha256": "2fb9b52e3b20fc3f1120dc7922eaf08ab516219300f89860d151bcf48fb13d78",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2076.6304680146277,
+      "resnet": 2.066742181777954,
+      "wrn": 1.333358645439148,
+      "component_relational": 0.521472532185751,
+      "eg2_768": 0.004002811731546929,
+      "eg2_256": 0.003236660254379853
+    },
+    {
+      "sha256": "079abc018dbb656d28cef8714a521554a26d0038eb79b0ec18df11152c4e1328",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2158.2851139828563,
+      "resnet": 2.0043697357177734,
+      "wrn": 1.2835301160812378,
+      "component_relational": 0.6601047627699981,
+      "eg2_768": 0.01756847296808739,
+      "eg2_256": 0.0153005951592593
+    },
+    {
+      "sha256": "ba0fa4205cba13296b45d9246f6756479d094efc405b34cf09ed2431c985c47e",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2488.41575300321,
+      "resnet": 2.1105430126190186,
+      "wrn": 1.4877070188522339,
+      "component_relational": 1.0584852866893155,
+      "eg2_768": 0.017336667165505415,
+      "eg2_256": 0.015970215717333813
+    },
+    {
+      "sha256": "696a0b820528b7a75a167cce78457827ab4c4b788a8ecb159c7fdda43a29584a",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2259.2566510429606,
+      "resnet": 2.5389528274536133,
+      "wrn": 1.5995521545410156,
+      "component_relational": 0.7502549405977097,
+      "eg2_768": 0.001854323551689685,
+      "eg2_256": 0.0012138772348823101
+    },
+    {
+      "sha256": "6514014c679c14285ea7d065fcd6b0443a99eefc504b3fd4bff5708d841812cf",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 2233.5569889983162,
+      "resnet": 2.1909101009368896,
+      "wrn": 1.4400995969772339,
+      "component_relational": 1.156774863540554,
+      "eg2_768": 0.012004823524726205,
+      "eg2_256": 0.009978730017196624
+    },
+    {
+      "sha256": "97ed6ff17e8cb87df9289eb28d0df9b7cf0e1df9a42dd89166ee6d1b26c92633",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2192.7998169558123,
+      "resnet": 2.1586318016052246,
+      "wrn": 1.3741015195846558,
+      "component_relational": 0.7362472381262795,
+      "eg2_768": 0.009847584684151256,
+      "eg2_256": 0.008906242602189307
+    },
+    {
+      "sha256": "b43fb7cb230d26da6817127972846378ff3d1ab35108502c6375bab2a3abdf26",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "calibration",
+      "latency_ms": 3717.3970140283927,
+      "resnet": 2.19356632232666,
+      "wrn": 1.3888154029846191,
+      "component_relational": 1.189339153909936,
+      "eg2_768": 0.02065702318145135,
+      "eg2_256": 0.01770777214493313
+    },
+    {
+      "sha256": "e692b9c06bbd54ff8bec3dfc264f7925a4b96d9ddb18068e8a4915c37f4571c9",
+      "category": "splicing_connectors",
+      "stratum": "logical_anomalies",
+      "split": "evaluation",
+      "latency_ms": 3216.6204770328477,
+      "resnet": 1.9911034107208252,
+      "wrn": 1.2746973037719727,
+      "component_relational": 0.5556749250882576,
+      "eg2_768": 0.015324400662293236,
+      "eg2_256": 0.010149511140161382
+    },
+    {
+      "sha256": "f0f007b3a413b52d087134966ddaef3048980cd43616b68807d6880692fb187c",
+      "category": "splicing_connectors",
+      "stratum": "structural_anomalies",
+      "split": "calibration",
+      "latency_ms": 2340.5892740702257,
+      "resnet": 2.077608108520508,
+      "wrn": 1.404006838798523,
+      "component_relational": 0.5720619932513389,
+      "eg2_768": 0.010885218103296124,
+      "eg2_256": 0.008694067083812929
+    },
+    {
+      "sha256": "6c93854a4690296e998ee5cdc16109cb61e87176022d87cc23abc415118b0fc2",
+      "category": "splicing_connectors",
+      "stratum": "structural_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2224.6613759780303,
+      "resnet": 2.6563477516174316,
+      "wrn": 1.6717860698699951,
+      "component_relational": 0.8810878567627768,
+      "eg2_768": 0.00584287873884537,
+      "eg2_256": 0.004101375276390873
+    },
+    {
+      "sha256": "c514a6c8fb12e7ec222a1f47db526a5b7d2a9aaeaa6e1d51b782ed4298ef04d0",
+      "category": "splicing_connectors",
+      "stratum": "structural_anomalies",
+      "split": "calibration",
+      "latency_ms": 2230.6636449648067,
+      "resnet": 1.9820408821105957,
+      "wrn": 1.28592848777771,
+      "component_relational": 0.6237469590203117,
+      "eg2_768": 0.002356257383185012,
+      "eg2_256": 0.0017415988347352362
+    },
+    {
+      "sha256": "b12a9620cbe378e6b5f22a85c5899fca010bb00424f7e1560b621b29ac077dbc",
+      "category": "splicing_connectors",
+      "stratum": "structural_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2223.216140992008,
+      "resnet": 2.55850887298584,
+      "wrn": 1.6763861179351807,
+      "component_relational": 0.8436289016318345,
+      "eg2_768": 0.009566498658667766,
+      "eg2_256": 0.007911119656700438
+    },
+    {
+      "sha256": "80ea0d0bad70a77c83d65c7aab8495ab94c9746c0f76aac9539b2b67d770eb74",
+      "category": "splicing_connectors",
+      "stratum": "structural_anomalies",
+      "split": "calibration",
+      "latency_ms": 2127.6485651033,
+      "resnet": 2.108823299407959,
+      "wrn": 1.3522347211837769,
+      "component_relational": 1.0752769507969782,
+      "eg2_768": 0.0072506530986753415,
+      "eg2_256": 0.005189751647661223
+    },
+    {
+      "sha256": "6dfd4e908e3130bb2108b9952f1d94ac3b68b3eefc8f5486fd459f248a1c03cc",
+      "category": "splicing_connectors",
+      "stratum": "structural_anomalies",
+      "split": "evaluation",
+      "latency_ms": 2034.7670239862055,
+      "resnet": 3.257082939147949,
+      "wrn": 2.151801347732544,
+      "component_relational": 0.9517170814563392,
+      "eg2_768": 0.05266424545417858,
+      "eg2_256": 0.04269366890677162
+    },
+    {
+      "sha256": "d4ced2be4663acbcc4b337ac2d38b26189ff1f473f0fbb02f7c91976ebbf4ad7",
+      "category": "splicing_connectors",
+      "stratum": "structural_anomalies",
+      "split": "calibration",
+      "latency_ms": 2051.895488984883,
+      "resnet": 2.0183749198913574,
+      "wrn": 1.3379803895950317,
+      "component_relational": 0.584373414503622,
+      "eg2_768": 0.0026294082767674976,
+      "eg2_256": 0.00183153060325425
+    },
+    {
+      "sha256": "ad5314d9b05c422f3b2f6997635be8cb92338b1faecfba491ede2e0bd63dc6f9",
+      "category": "splicing_connectors",
+      "stratum": "structural_anomalies",
+      "split": "evaluation",
+      "latency_ms": 1983.969799010083,
+      "resnet": 2.401401996612549,
+      "wrn": 1.512629508972168,
+      "component_relational": 0.9787524249824369,
+      "eg2_768": 0.005419415133735561,
+      "eg2_256": 0.00408548933535724
+    }
+  ],
+  "metrics": {
+    "eg2_768": {
+      "by_category": {
+        "juice_bottle": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.55
+        },
+        "splicing_connectors": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.44999999999999996
+        }
+      },
+      "all": {
+        "n_good": 12,
+        "n_defect": 20,
+        "n_logical": 12,
+        "n_structural": 8,
+        "auc": 0.48333333333333334
+      }
+    },
+    "eg2_256": {
+      "by_category": {
+        "juice_bottle": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.5833333333333334
+        },
+        "splicing_connectors": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.44999999999999996
+        }
+      },
+      "all": {
+        "n_good": 12,
+        "n_defect": 20,
+        "n_logical": 12,
+        "n_structural": 8,
+        "auc": 0.48750000000000004
+      }
+    },
+    "resnet": {
+      "by_category": {
+        "juice_bottle": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.9
+        },
+        "splicing_connectors": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.7
+        }
+      },
+      "all": {
+        "n_good": 12,
+        "n_defect": 20,
+        "n_logical": 12,
+        "n_structural": 8,
+        "auc": 0.8375
+      }
+    },
+    "wrn": {
+      "by_category": {
+        "juice_bottle": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.9666666666666667
+        },
+        "splicing_connectors": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.75
+        }
+      },
+      "all": {
+        "n_good": 12,
+        "n_defect": 20,
+        "n_logical": 12,
+        "n_structural": 8,
+        "auc": 0.8458333333333333
+      }
+    },
+    "component_relational": {
+      "by_category": {
+        "juice_bottle": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.7166666666666666
+        },
+        "splicing_connectors": {
+          "n_good": 6,
+          "n_defect": 10,
+          "n_logical": 6,
+          "n_structural": 4,
+          "auc": 0.38333333333333336
+        }
+      },
+      "all": {
+        "n_good": 12,
+        "n_defect": 20,
+        "n_logical": 12,
+        "n_structural": 8,
+        "auc": 0.5875
+      }
+    }
+  },
+  "policies": {
+    "eg2_768": {
+      "juice_bottle": {
+        "threshold": 0.00043105423507405755,
+        "good_releases": 1,
+        "good_n": 6,
+        "defect_escapes": 0,
+        "defect_n": 10
+      },
+      "splicing_connectors": {
+        "threshold": 0.0023562573831850116,
+        "good_releases": 0,
+        "good_n": 6,
+        "defect_escapes": 1,
+        "defect_n": 10
+      }
+    },
+    "eg2_256": {
+      "juice_bottle": {
+        "threshold": 0.00047876645549504987,
+        "good_releases": 1,
+        "good_n": 6,
+        "defect_escapes": 0,
+        "defect_n": 10
+      },
+      "splicing_connectors": {
+        "threshold": 0.001741598834735236,
+        "good_releases": 0,
+        "good_n": 6,
+        "defect_escapes": 1,
+        "defect_n": 10
+      }
+    }
+  },
+  "latency_ms": {
+    "n": 112,
+    "p50": 2252.424188540317,
+    "p95": 3089.1432199336095
+  },
+  "disk_free_bytes_after": 8720039936
+}

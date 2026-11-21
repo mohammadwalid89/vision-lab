@@ -1,0 +1,68 @@
+{
+ "rule": "Amendment 2: per family, the variant with the lowest mean out-of-sample cost among those whose mean\n    out-of-sample escape rate is <= 1 %; its deployed point is the policy most often selected on half A, unless\n    that point releases a defect on the full selection set, in which case the full-set selection is used.",
+ "systems": {
+  "ad|phase2": {
+   "family": "ad",
+   "system": "wrn",
+   "policy": {
+    "ah": 0.02,
+    "ar": {
+     "bottle": 0.15,
+     "cable": 0.3,
+     "hazelnut": 0.3,
+     "pill": 0.95,
+     "tile": 0.05,
+     "transistor": 0.05
+    }
+   },
+   "policy_source": "most_selected_on_half_A",
+   "variant": "ad|wrn|calib=oof|comp=-|per_category",
+   "comp_key": "knn",
+   "kit_calib": "oof"
+  },
+  "ad|v001": {
+   "family": "ad",
+   "system": "v001",
+   "variant": "ad|v001 as deployed"
+  },
+  "ad|v001_tuned": {
+   "family": "ad",
+   "system": "v001_tuned",
+   "policy": {
+    "ah": 0.02,
+    "ar": 0.95
+   },
+   "variant": "ad|v001_tuned|calib=oof|comp=-|global",
+   "kit_calib": "oof",
+   "comp_key": "knn"
+  },
+  "loco|phase2": {
+   "family": "loco",
+   "system": "v001_tuned",
+   "policy": {
+    "ah": 0.0,
+    "ar": 0.3
+   },
+   "policy_source": "most_selected_on_half_A",
+   "variant": "loco|v001_tuned|calib=oof|comp=-|global",
+   "comp_key": "knn",
+   "kit_calib": "oof"
+  },
+  "loco|v001": {
+   "family": "loco",
+   "system": "v001",
+   "variant": "loco|v001 as deployed"
+  },
+  "loco|v001_tuned": {
+   "family": "loco",
+   "system": "v001_tuned",
+   "policy": {
+    "ah": 0.0,
+    "ar": 0.3
+   },
+   "variant": "loco|v001_tuned|calib=oof|comp=-|global",
+   "kit_calib": "oof",
+   "comp_key": "knn"
+  }
+ }
+}
