@@ -24,11 +24,14 @@ import shlex
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
 import numpy as np
 from sklearn.linear_model import LogisticRegression
+
+from vision_lab.metrics import auc
 
 HERE = Path(__file__).resolve().parent
 PROMPTS = HERE / "prompts"
@@ -129,10 +132,20 @@ class Suite:
         order = [ts[r] for r in range(spec["rounds"]) for ts in by.values() if r < len(ts)]
         (self.root / "order.json").write_text(json.dumps(order))
 
+    def agent_folder(self, name):
+        wd = agent_folder(name)
+        if self.root.resolve() in wd.resolve().parents:
+            raise SystemExit(f"agent folder {wd} is inside the work directory; set WSP_AGENT_TMP elsewhere")
+        return wd
+
     def research(self):
         rd = self.root / "research"
         rd.mkdir(exist_ok=True)
-        self.agent(rd, self.prompt("research"), ["WebSearch", "WebFetch", "Write", "Read"], 30)
+        # Like the task sessions, the research agent works outside the work directory; copied back after.
+        wd = self.agent_folder("research")
+        self.agent(wd, self.prompt("research"), ["WebSearch", "WebFetch", "Write", "Read"], 30)
+        shutil.copytree(wd, rd, dirs_exist_ok=True)
+        shutil.rmtree(wd)
         self.log("research done" if (rd / "PLAYBOOK.md").exists() else "research: no PLAYBOOK.md")
 
     def run(self, arm):
@@ -149,12 +162,14 @@ class Suite:
         for i, task in enumerate(order):
             if task in done:
                 continue
-            td, wd = self.tasks / task, ad / task
-            if wd.exists():
-                shutil.rmtree(wd)
-            wd.mkdir()
+            td, rd = self.tasks / task, ad / task
+            if rd.exists():
+                shutil.rmtree(rd)
+            # The agent works in a new folder outside the work directory that holds only its inputs, so the
+            # test split and the other arm are not below or beside it; its files are copied back to rd after.
+            wd = self.agent_folder(task)
             meta = json.loads((td / "meta.json").read_text())
-            for f in ("fit.npz", "feedback.npz", "start_head.npz"):
+            for f in AGENT_INPUTS:
                 shutil.copy(td / f, wd / f)
             shutil.copy(td / "start_head.npz", wd / "candidate.npz")
             if (self.root / "research" / "PLAYBOOK.md").exists():
@@ -172,11 +187,12 @@ class Suite:
             self.log(f"{arm} task {i + 1}/{len(order)} {task}: agent start")
             self.agent(wd, "Read BRIEF.md in this folder and do the task. Stay inside this folder.",
                        ["Bash", "Read", "Write", "Edit"], 40)
+            shutil.copytree(wd, rd)
 
             c = np.load(td / "start_head.npz")
             heads = {"start": (c["coef"], float(c["intercept"]))}
-            if (wd / "final.npz").exists():
-                f = np.load(wd / "final.npz")
+            if (rd / "final.npz").exists():
+                f = np.load(rd / "final.npz")
                 heads["agent"] = (f["coef"].astype(np.float64), float(f["intercept"]))
             heads["placebo"] = placebo(td)
             fx, fb = np.load(td / "fit.npz"), np.load(td / "feedback.npz")
@@ -185,7 +201,7 @@ class Suite:
             if v2:
                 heads["trained_tuned"] = fit_head(pool_X, pool_y, tune=True)
             sc = test_scores(td, heads)
-            calls = sum(1 for _ in open(wd / "calls.jsonl")) if (wd / "calls.jsonl").exists() else 0
+            calls = sum(1 for _ in open(rd / "calls.jsonl")) if (rd / "calls.jsonl").exists() else 0
             row = {"arm": arm, "i": i, "task": task, "calls": calls, "test": sc}
             with open(res_file, "a") as f:
                 f.write(json.dumps(row) + "\n")
@@ -193,16 +209,26 @@ class Suite:
             if arm == "lessons" and "agent" in sc:
                 (wd / "TEST_RESULT.json").write_text(json.dumps(sc, indent=1))
                 self.agent(wd, self.prompt("lesson"), ["Read", "Edit", "Write"], 10)
-                shutil.copy(wd / "LESSONS.md", lessons)
-            if v2 and (wd / "METHODS.md").exists():
-                shutil.copy(wd / "METHODS.md", ad / "METHODS.md")
+                shutil.copytree(wd, rd, dirs_exist_ok=True)
+                shutil.copy(rd / "LESSONS.md", lessons)
+            shutil.rmtree(wd)
+            if v2 and (rd / "METHODS.md").exists():
+                shutil.copy(rd / "METHODS.md", ad / "METHODS.md")
         self.log(f"{arm}: ALL TASKS DONE")
 
 
-def auc(s, y):
-    p, n = s[y == 1], s[y == 0]
-    return float(((p[:, None] > n[None, :]).sum() + .5 * (p[:, None] == n[None, :]).sum())
-                 / (len(p) * len(n)))
+# The only task files an agent gets; test.npz and meta.json stay in tasks/<task>/.
+AGENT_INPUTS = ("fit.npz", "feedback.npz", "start_head.npz")
+
+
+def agent_folder(task):
+    """A new, empty folder for one agent session, outside the work directory ($WSP_AGENT_TMP or the system
+    temporary folder).  Isolation is by location only: the agent's Bash tool can still read any path its user
+    can, so run the suite as a user, or in a container, that cannot read the work directory."""
+    base = os.environ.get("WSP_AGENT_TMP")
+    if base:
+        Path(base).mkdir(parents=True, exist_ok=True)
+    return Path(tempfile.mkdtemp(prefix=f"wsp_{task}_", dir=base))
 
 
 def fit_head(X, y, tune=False):
@@ -239,7 +265,7 @@ def test_scores(td, heads):
     for name, (w, b) in heads.items():
         s = t["X"] @ w + b
         out[name] = {"acc": round(float(np.mean((s > 0) == (t["y"] == 1))), 4),
-                     "auc": round(auc(s, t["y"]), 4)}
+                     "auc": round(auc(t["y"], s), 4)}
     return out
 
 

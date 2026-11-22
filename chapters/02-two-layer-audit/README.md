@@ -27,7 +27,7 @@ On nine MVTec AD categories the earlier scorer had not seen (225 test images, 13
 
 **What it means.** A calibrated per-category gate did most of the work, and a cheap second layer adds defects the first misses at about a tenth of the cost of the full stack for almost the same AUC. The limits are large: this is an exposed research set, the nine "new" categories overlap an earlier surface experiment (they were unseen by the v3.1 scorer, not blind), zero wrong releases in sample is bounded at 1.41%, not zero, and the cost and economics scenarios use assumed penalties. A summary table in the original run report printed 71 and 106 catches in its "All anomalies" row; the scored JSON gives 67 and 102 (the sums of the two type rows), and the 63 and 129 agree. The table above uses the JSON.
 
-**How to run.** The cached v3.1 score tables are not in this repo, so only the analysis scripts can run, against your own copy of those tables:
+**How to run.** The cached v3.1 score tables are not in this repo, so only the analysis scripts can run, against your own copy of those tables. The scripts import the `vision_lab` package, so install it or put `src` on the path first (root README, "How to run").
 
 ```
 export VISION_V31_ROOT=/path/to/v31_tree      # results/v31/... score tables, data/public/...

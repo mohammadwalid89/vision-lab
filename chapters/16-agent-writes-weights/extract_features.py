@@ -37,6 +37,9 @@ def main():
     ap.add_argument("out", help="output directory")
     ap.add_argument("n_per_dataset", type=int)
     ap.add_argument("--model", default="facebook/dinov2-small")
+    # The run did not record which commit of the model it downloaded, so there is nothing to pin to;
+    # pass a commit here to make a new extraction repeatable.
+    ap.add_argument("--revision", default=None, help="model commit on Hugging Face (default: current main)")
     ap.add_argument("--threads", type=int, default=3)
     a = ap.parse_args()
 
@@ -46,8 +49,8 @@ def main():
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     torch.set_num_threads(a.threads)
-    proc = AutoImageProcessor.from_pretrained(a.model)
-    model = AutoModel.from_pretrained(a.model).eval()
+    proc = AutoImageProcessor.from_pretrained(a.model, revision=a.revision)
+    model = AutoModel.from_pretrained(a.model, revision=a.revision).eval()
 
     def log(m):
         line = f"{time.strftime('%H:%M:%S')} {m}"

@@ -31,6 +31,8 @@ for _var in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS"):
 import numpy as np  # noqa: E402
 import torch  # noqa: E402
 
+from vision_lab.metrics import auc  # noqa: E402
+
 torch.set_num_threads(1)
 torch.set_num_interop_threads(1)
 
@@ -51,31 +53,6 @@ def sha_file(path: Path) -> str:
 def sha_array(a: np.ndarray) -> str:
     a = np.ascontiguousarray(a)
     return hashlib.sha256(str(a.shape).encode() + str(a.dtype).encode() + a.tobytes()).hexdigest()
-
-
-def ranks(x: np.ndarray) -> np.ndarray:
-    """Average ranks (1-based) with ties."""
-    order = np.argsort(x, kind="mergesort")
-    out = np.empty(len(x), float)
-    xs = x[order]
-    i = 0
-    while i < len(xs):
-        j = i
-        while j + 1 < len(xs) and xs[j + 1] == xs[i]:
-            j += 1
-        out[order[i:j + 1]] = (i + j) / 2.0 + 1.0
-        i = j + 1
-    return out
-
-
-def auc(y, s) -> float:
-    y = np.asarray(y).astype(int)
-    pos = y == 1
-    n_pos, n_neg = int(pos.sum()), int((~pos).sum())
-    if n_pos == 0 or n_neg == 0:
-        return float("nan")
-    r = ranks(np.asarray(s, float))
-    return float((r[pos].sum() - n_pos * (n_pos + 1) / 2.0) / (n_pos * n_neg))
 
 
 def bootstrap_auc(y, s, reps=1000, seed=SEED):

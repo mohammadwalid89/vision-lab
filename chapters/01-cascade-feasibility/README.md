@@ -29,6 +29,6 @@ python chapters/01-cascade-feasibility/surface_eval.py --data-root "$VISION_DATA
 python chapters/01-cascade-feasibility/text_eval.py --data-root "$VISION_DATA_ROOT/total_text" --out total_text.json --download
 ```
 
-`text_eval.py` needs PaddleOCR and the `tesseract` binary. MVTec AD and MVTec LOCO are CC BY-NC-SA 4.0 and must be fetched by the user. A toy run that needs no data: `python chapters/01-cascade-feasibility/synthetic_smoke.py`.
+`text_eval.py` needs PaddleOCR and the `tesseract` binary. Both scripts fetch the dataset commits recorded in `results/` (Total-Text, MVTec AD and LOCO mirrors); the VisA mirror has no recorded commit and is read at its current head. MVTec AD and MVTec LOCO are CC BY-NC-SA 4.0 and must be fetched by the user. A toy run that needs no data: `python chapters/01-cascade-feasibility/synthetic_smoke.py`.
 
 **Status.** Done (negative for release). Code cleaned from the run version: the per-case trace store, run ledger and dashboard bookkeeping were dropped, so the summary JSON here has the same metrics but fewer per-case fields; the three result files are the original run outputs. Verified here: `py_compile` and `ruff` pass; `synthetic_smoke.py` ran end to end on a generated 2-category toy cohort (50 test images, random textures) using the cached ResNet-18 weights. Not verified here: the data download, `text_eval.py` (needs PaddleOCR and the OCR models), and a numeric re-run of the cleaned scripts against the published numbers (the real images are not on hand in this repo).

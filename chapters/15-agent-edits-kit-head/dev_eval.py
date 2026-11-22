@@ -10,14 +10,10 @@ from pathlib import Path
 
 import numpy as np
 
+from vision_lab.metrics import auc
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "14-kits-written-checks"))
 from kits_features import FeatureCache  # noqa: E402
-
-
-def auc(s, y):
-    p, n = s[y == 1], s[y == 0]
-    return float(((p[:, None] > n[None, :]).sum() + .5 * (p[:, None] == n[None, :]).sum())
-                 / (len(p) * len(n)))
 
 
 def main():
@@ -36,7 +32,7 @@ def main():
     res = {}
     for path in a.heads:
         c = np.load(path)
-        res[Path(path).name] = round(auc(X @ c["coef"] + float(c["intercept"]), y), 4)
+        res[Path(path).name] = round(auc(y, X @ c["coef"] + float(c["intercept"])), 4)
     res["n_dev"] = [int(y.sum()), int((1 - y).sum())]
     print(json.dumps(res))
     Path(a.out).write_text(json.dumps(res, indent=1))

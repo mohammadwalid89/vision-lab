@@ -24,6 +24,8 @@ from vision_lab.cascade.hashing import phash
 from vision_lab.cascade.metrics import summarize, wilson
 
 REPO = "Voxel51/Total-Text-Dataset"
+# the dataset commit the published run used (results/total_text.json); not the current HEAD
+REVISION = "0ce21350d2ed3f47f7269c7a19d0eeb702952ace"
 SOURCE = "https://github.com/cs-chan/Total-Text-Dataset"
 LICENSE = "BSD-3-Clause"
 BOOTSTRAP_SEED = 20261022
@@ -36,8 +38,7 @@ def words(text: str) -> Counter:
 
 def build_manifest(root: Path) -> dict:
     root.mkdir(parents=True, exist_ok=True)
-    metadata = requests.get("https://huggingface.co/api/datasets/" + REPO, timeout=30).json()
-    revision = metadata["sha"]
+    revision = REVISION
     base = f"https://huggingface.co/datasets/{REPO}/resolve/{revision}/"
     response = requests.get(base + "samples.json", timeout=30)
     response.raise_for_status()

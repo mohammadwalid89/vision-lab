@@ -8,14 +8,10 @@ from pathlib import Path
 
 import numpy as np
 
+from vision_lab.metrics import auc
+
 BUDGET = 50
 SEED = 7
-
-
-def auc(s, y):
-    p, n = s[y == 1], s[y == 0]
-    return float(((p[:, None] > n[None, :]).sum() + .5 * (p[:, None] == n[None, :]).sum())
-                 / (len(p) * len(n)))
 
 
 def main():
@@ -29,14 +25,14 @@ def main():
     X, y = v["X"].astype(np.float64), v["y"]
     c = np.load(sb / "start_head.npz")
     w, b = c["coef"].copy(), float(c["intercept"])
-    best = auc(X @ w + b, y)
+    best = auc(y, X @ w + b)
     rng = np.random.default_rng(SEED)
     for _ in range(BUDGET):
         w2 = w.copy()
         k = rng.choice(len(w), 40, replace=False)
         w2[k] *= np.exp(rng.normal(0, .5, 40))
         w2 += rng.normal(0, 1, len(w)) * np.linalg.norm(w) / np.sqrt(len(w)) * .1
-        score = auc(X @ w2 + b, y)
+        score = auc(y, X @ w2 + b)
         if score > best:
             best, w = score, w2
     np.savez_compressed(a.out, coef=w, intercept=np.float64(b))

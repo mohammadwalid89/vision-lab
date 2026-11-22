@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install (CPU torch; only what the data-free tests import)
+        run: |
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.14.1
+          python -m pip install numpy==2.3.5 scipy==1.18.1 scikit-learn==1.9.1 pillow==12.3.0 pytest==9.1.1 ruff==0.17.2
+          python -m pip install --no-deps -e .
+      - name: Lint
+        run: ruff check .
+      - name: Published result files unchanged
+        run: python scripts/check_results.py
+      # No data and no model weights: tests that need them skip.  R1_SCORER_DIR turns on the parity tests
+      # against the Round 1 and 2 scorer copies in src/vision_lab/wsp/legacy.
+      - name: Tests
+        env:
+          R1_SCORER_DIR: src/vision_lab/wsp/legacy
+        run: >-
+          python -m pytest -q -rs tests
+          chapters/11-shortcut-rounds-1-2/tests
+          chapters/12-deletion-threshold-probes/tests
+          chapters/13-round3-mask-the-object/tests
+          chapters/16-agent-writes-weights/tests

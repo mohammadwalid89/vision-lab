@@ -67,6 +67,8 @@ python scripts/fetch_data.py           # lists datasets, licences and target fol
 
 Each chapter README gives its own commands. Data and model locations come from arguments or environment variables (for example `LOCO_ROOT`, `VISION_COHORT_DIR`, `KTH_CLIPS_DIR`, `SIGLIP2_DIR`); nothing points at a fixed path. Most chapters include a smoke run on synthetic input that needs no dataset. Chapters 15 and 16 start a coding agent through the command in `WSP_AGENT_CMD`; credentials come from your environment and none are stored here.
 
+`python scripts/check_results.py` re-checks the sha256 of every published result file, pre-registration and plan file against `results.sha256`. CI (`.github/workflows/ci.yml`) runs ruff, that check, and the tests that need no data: `tests/`, and the tests of chapters 11, 12, 13 and 16.
+
 ## Licence and dataset credits
 
 Code: MIT, Copyright (c) 2026 Mohammad Walid (see `LICENSE`).

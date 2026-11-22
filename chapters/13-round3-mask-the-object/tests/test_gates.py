@@ -49,6 +49,17 @@ def test_worst_seed_decides_and_means_never_rescue():
     assert ev["per_seed"]["1"]["2_recall_margin"]["verdict"] == "PASS"
 
 
+def test_a_gate_missing_from_one_seed_fails_instead_of_being_dropped():
+    # seed s1 lacks gate 1a, which fails in s0; it must not vanish and leave pass_all true
+    vals = {"s0": {"2_recall_margin": 0.0, "1a_marker_relative_reduction": -1.0}, "s1": {"2_recall_margin": 0.0}}
+    with pytest.raises(ValueError, match="missing"):
+        G.evaluate(vals)
+    with pytest.raises(ValueError, match="no seeds"):
+        G.evaluate({})
+    with pytest.raises(ValueError, match="no known gate"):
+        G.evaluate({"s0": {}, "s1": {}})
+
+
 def test_impossibility_flags():
     a = dict(marker_flip_rate=.2)
     f = G.impossibility_flags(a, [dict(marker_flip_rate=.05)], {"warm": dict(marker_flip_rate=.04)})

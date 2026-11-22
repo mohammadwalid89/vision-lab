@@ -19,6 +19,8 @@ from pathlib import Path
 
 import numpy as np
 
+from vision_lab.metrics import auc  # noqa: F401  (the audit scripts import it from here)
+
 ROOT = Path(os.environ.get("VISION_V31_ROOT", "."))
 RES = Path(os.environ.get("VISION_OUT", "out"))
 MET = RES / "metrics"
@@ -76,7 +78,9 @@ def load_local_scores(include_heldout: bool = False) -> list[dict]:
 def load_heldout_scores() -> list[dict]:
     path = RES / "heldout_ad_scores.jsonl"
     if not path.exists():
-        return []
+        # An empty list here would mark held-out images as fresh (chapter 03) and leave the nine
+        # held-out categories without calibration, so a missing file is an error.
+        raise FileNotFoundError(f"{path} is missing; run score_heldout_ad.py first, or set VISION_OUT to its folder")
     out = []
     for line in path.read_text().splitlines():
         r = json.loads(line)
@@ -124,15 +128,6 @@ def balanced_accuracy(y, pred) -> float:
         if m.sum():
             vals.append((pred[m] == c).mean())
     return float(np.mean(vals)) if vals else float("nan")
-
-
-def auc(y, s) -> float:
-    from sklearn.metrics import roc_auc_score
-    y = np.asarray(y, int)
-    s = np.asarray(s, float)
-    if len(np.unique(y)) < 2:
-        return float("nan")
-    return float(roc_auc_score(y, s))
 
 
 def average_precision(y, s) -> float:

@@ -27,6 +27,6 @@ The input table is produced by chapter 02 (`score_heldout_ad.py`, which needs MV
 python programmed_head.py --cohort-dir <folder with heldout_ad_scores.jsonl, clip_embeddings.npz, resnet_embeddings.npz> \
     [--protocol <role-labelled protocol json>] --out results/summary.json
 ```
-One CPU thread, about six seconds. `--protocol` runs an overlap check against reserved rows and is optional.
+One CPU thread, about six seconds. `--protocol` runs an overlap check against reserved rows and is optional. The script imports the `vision_lab` package, so install it or put `src` on the path first (root README, "How to run").
 
 **Status.** Done. Code is cleaned from the run script: server paths became arguments, the saved weight arrays, code hash and artifact folder were dropped, the reserved-row overlap check became optional, and the shared gated-unit construction was factored out of the programmed and placebo builders; the formulas are unchanged. Verified here: `python -m py_compile` and `ruff check` pass; the cleaned script was run on the original cached feature table and reproduces the numbers above (`results/summary.json` is that output); on a synthetic cohort (three categories) the cleaned script and the original run script give identical AUCs, intervals, operating points, per-category tables and weight hashes for all six arms.

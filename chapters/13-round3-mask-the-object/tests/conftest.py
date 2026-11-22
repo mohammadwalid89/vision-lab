@@ -1,7 +1,7 @@
 """Test setup.
 
 Parity tests compare the library with the R1/R2 scorer, gate and ordering modules.
-Set R1_SCORER_DIR=src/vision_lab/wsp/legacy to run the scorer and gate parity tests (63 pass).
+Set R1_SCORER_DIR=src/vision_lab/wsp/legacy to run the scorer and gate parity tests (64 pass).
 The ordering parity test needs ordered.py from the Round 1 run, which is not published, and
 stays skipped; without R1_SCORER_DIR all parity tests are skipped.
 """

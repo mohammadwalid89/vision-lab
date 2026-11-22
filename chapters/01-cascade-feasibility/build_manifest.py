@@ -20,6 +20,7 @@ from vision_lab.cascade.hashing import assert_disjoint, phash
 SOURCES = {
     "mvtec_ad": {
         "repo": "foersben/mvtec-ad",
+        "revision": "c75b39616f84db43677bcc8228caaafaf5096d7f",  # as in results/mvtec_ad_surface.json
         "source": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
         "license": "CC-BY-NC-SA-4.0",
         "attribution": "MVTec Software GmbH; Bergmann et al. (2019, 2021)",
@@ -32,6 +33,7 @@ SOURCES = {
     },
     "mvtec_loco": {
         "repo": "Rafa612/mvtec_loco",
+        "revision": "839fee8178c10d2e50afddc671238ba85d9975d9",  # as in results/mvtec_loco_surface.json
         "source": "https://www.mvtec.com/company/research/datasets/mvtec-loco",
         "license": "CC-BY-NC-SA-4.0",
         "attribution": "MVTec Software GmbH; Bergmann et al., MVTec LOCO AD (2022)",
@@ -85,10 +87,17 @@ def select(source: str, category: str, files: list[str]) -> list[tuple]:
 def build(source: str, root: Path) -> dict:
     info = SOURCES[source]
     root.mkdir(parents=True, exist_ok=True)
-    meta = requests.get("https://huggingface.co/api/datasets/" + info["repo"], timeout=30)
+    # Pinned to the commit the published run used where results/ records it; VisA has no recorded
+    # commit (no published VisA result), so it still reads the current HEAD.
+    url = "https://huggingface.co/api/datasets/" + info["repo"]
+    if info.get("revision"):
+        url += "/revision/" + info["revision"]
+    meta = requests.get(url, timeout=30)
     meta.raise_for_status()
     meta = meta.json()
     revision = meta["sha"]
+    if info.get("revision") and revision != info["revision"]:
+        raise ValueError(f"{info['repo']}: asked for revision {info['revision']}, got {revision}")
     files = [entry["rfilename"] for entry in meta["siblings"]]
     categories = sorted({n.split("/")[0] for n in files
                          if "/" in n and n.split("/")[0] not in ("results", "split_csv")})

@@ -89,10 +89,22 @@ def impossibility_flags(a: Mapping, placebos: Sequence[Mapping] = (),
 
 
 def evaluate(per_seed_values: Mapping[str, Mapping[str, float]]) -> dict:
-    """Worst-seed aggregation over whatever gates are present in every seed."""
+    """Worst-seed aggregation per gate.
+
+    Every seed must carry the same gates: a gate missing from one seed raises ``ValueError`` instead of being
+    dropped, because dropping it could turn a failing gate into ``pass_all``.  So do no seeds and no known gate.
+    """
     seeds = sorted(per_seed_values)
-    names = set.intersection(*[set(per_seed_values[s]) for s in seeds])
-    names = [n for n in BARS if n in names]
+    if not seeds:
+        raise ValueError("no seeds to evaluate")
+    present = set().union(*[set(per_seed_values[s]) for s in seeds])
+    missing = {s: sorted(present - set(per_seed_values[s])) for s in seeds}
+    missing = {s: m for s, m in missing.items() if m}
+    if missing:
+        raise ValueError(f"gates missing from some seeds: {missing}")
+    names = [n for n in BARS if n in present]
+    if not names:
+        raise ValueError("no known gate in the per-seed values")
     per_seed = {s: {n: dict(value=per_seed_values[s][n],
                             verdict="PASS" if per_seed_values[s][n] >= BARS[n] - TOL else "FAIL")
                     for n in names} for s in seeds}
